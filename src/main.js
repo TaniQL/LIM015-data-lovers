@@ -1,6 +1,6 @@
-import { example } from './data.js';
+//import { example } from './data.js';
 
-import data from './data/pokemon/pokemon.js';
+//import data from './data/pokemon/pokemon.js';
 
 const btnPokedex = document.getElementById("pokedex");
 let home = document.getElementById("home");
