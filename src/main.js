@@ -2,14 +2,11 @@ import { example } from './data.js';
 
 import data from './data/pokemon/pokemon.js';
 
-//const btnPokedex = document.getElementById("btn-pokedex")
+const btnPokedex = document.getElementById("pokedex");
+let home = document.getElementById("home");
 
-//btnPokedex.addEventListener("click",() => {
+btnPokedex.addEventListener("click",() => {
+home.style.display="none";
 
-//})
-console.log(example, data);
+});
 
-const getData=()=>{
-    var newData = "";
-    console.log(newData)
-}
