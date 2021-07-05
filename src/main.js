@@ -1,14 +1,15 @@
-import { example } from './data.js';
+import { dataPokemon } from './data.js';
 
 import data from './data/pokemon/pokemon.js';
 
-const btnPokedex = document.getElementById("pokedex");
-let home = document.getElementById("home");
+/** Mostrar y ocultar secciones del HTML**/
 
 btnPokedex.addEventListener("click",() => {
+let home = document.getElementById("home");
+const btnPokedex = document.getElementById("btnPokedex");
 home.style.display="none";
 
 });
 
 
-document.getElementById("pokemones").innerHTML = data.pokemon.map(example).join(" ");
+document.getElementById("pokedex").innerHTML = data.pokemon.map(dataPokemon).join(" ");
