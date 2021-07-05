@@ -11,4 +11,4 @@ home.style.display="none";
 });
 
 
-document.getElementById("pokemones").innerHTML = data.pokemon.map(example).join(" ");
+document.getElementById("pokedex").innerHTML = data.pokemon.map(example).join(" ");
