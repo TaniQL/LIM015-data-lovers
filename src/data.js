@@ -4,20 +4,22 @@ export const dataPokemon = (elemento) => {
 let evolution = '';
 let nextEvolution = '';
 let prevEvolution = '';
+let prevPrevEvolution = '';
 
-if (elemento.evolution["next-evolution"]){
+if (elemento.evolution.hasOwnProperty("next-evolution")){
   evolution = elemento.evolution["next-evolution"][0].name;
-  // nextEvolution = elemento.evolution["next-evolution"][0]["next-evolution"][0].name;
 
-// } else if (elemento.evolution["next-evolution"] && elemento.evolution["next-evolution"]["next-evolution"]){
-//   evolution = elemento.evolution["next-evolution"][0].name;
-//   nextEvolution = elemento.evolution["next-evolution"][0]["next-evolution"][0].name;
-
-} else if (elemento.evolution["prev-evolution"]){
+  if(elemento.evolution["next-evolution"][0].hasOwnProperty("next-evolution")){
+  nextEvolution = elemento.evolution["next-evolution"][0]["next-evolution"][0].name;
+  } else if (elemento.evolution.hasOwnProperty("prev-evolution")){
+    prevEvolution = elemento.evolution["prev-evolution"][0].name;
+  }
+} else if (elemento.evolution.hasOwnProperty("prev-evolution")){
   prevEvolution = elemento.evolution["prev-evolution"][0].name;
+  if(elemento.evolution["prev-evolution"][0].hasOwnProperty("prev-evolution")){
+  prevPrevEvolution = elemento.evolution["prev-evolution"][0]["prev-evolution"][0].name;
+  }
 }
-
-
 
   return `<article class="cardPokemon-front">
   <h1 class="namePokemon">${elemento.name}</h1>
@@ -32,7 +34,8 @@ if (elemento.evolution["next-evolution"]){
 <h2 class="weakness">${elemento.weaknesses}</h2>
 <h3 class="evolution">${evolution}</h3>
 <h3 class="next-evolution">${nextEvolution}</h3>
-<h3 class="prev-evolution">${prevEvolution}</h3><br></br>
+<h3 class="prev-evolution">${prevEvolution}</h3>
+<h3 class="prev-evolution">${prevPrevEvolution}</h3><br></br>
 </article>
 `
   ;
