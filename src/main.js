@@ -3,10 +3,10 @@ import { dataPokemon } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 /** Mostrar y ocultar secciones del HTML**/
+const btnPokedex = document.getElementById("btnPokedex");
 
 btnPokedex.addEventListener("click",() => {
 let home = document.getElementById("home");
-const btnPokedex = document.getElementById("btnPokedex");
 home.style.display="none";
 
 });
