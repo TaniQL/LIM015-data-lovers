@@ -1,25 +1,26 @@
+/* eslint-disable no-prototype-builtins */
 // estas funciones son de ejemplo
 
 export const dataPokemon = (elemento) => {
-let evolution = '';
-let nextEvolution = '';
-let prevEvolution = '';
-let prevPrevEvolution = '';
+  let evolution = '';
+  let nextEvolution = '';
+  let prevEvolution = '';
+  let prevPrevEvolution = '';
 
-if (elemento.evolution.hasOwnProperty("next-evolution")){
-  evolution = elemento.evolution["next-evolution"][0].name;
+  if (elemento.evolution.hasOwnProperty("next-evolution")){
+    evolution = elemento.evolution["next-evolution"][0].name;
 
-  if(elemento.evolution["next-evolution"][0].hasOwnProperty("next-evolution")){
-  nextEvolution = elemento.evolution["next-evolution"][0]["next-evolution"][0].name;
+    if(elemento.evolution["next-evolution"][0].hasOwnProperty("next-evolution")){
+    nextEvolution = elemento.evolution["next-evolution"][0]["next-evolution"][0].name;
+    } else if (elemento.evolution.hasOwnProperty("prev-evolution")){
+      prevEvolution = elemento.evolution["prev-evolution"][0].name;
+    }
   } else if (elemento.evolution.hasOwnProperty("prev-evolution")){
     prevEvolution = elemento.evolution["prev-evolution"][0].name;
+    if(elemento.evolution["prev-evolution"][0].hasOwnProperty("prev-evolution")){
+    prevPrevEvolution = elemento.evolution["prev-evolution"][0]["prev-evolution"][0].name;
+    }
   }
-} else if (elemento.evolution.hasOwnProperty("prev-evolution")){
-  prevEvolution = elemento.evolution["prev-evolution"][0].name;
-  if(elemento.evolution["prev-evolution"][0].hasOwnProperty("prev-evolution")){
-  prevPrevEvolution = elemento.evolution["prev-evolution"][0]["prev-evolution"][0].name;
-  }
-}
 
   return `<article class="cardPokemon-front" id="cardPokemonFront">
   <h1 class="namePokemon">${elemento.name}</h1>
@@ -44,6 +45,6 @@ if (elemento.evolution.hasOwnProperty("next-evolution")){
 };
 
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+  export const anotherExample = () => {
+    return 'OMG';
+  };
