@@ -29,7 +29,7 @@ export const dataPokemon = (elemento) => {
   <h4 class="typePokemon">${elemento.type}</h4>
   </div>
 
- <div class="cardPokemon-back">
+  <div class="cardPokemon-back">
   <h2 class="region">Region:${elemento.generation.name}</h2>
   <h2 class="resistant">Resistant:${elemento.resistant}</h2>
   <h2 class="weakness">Weakness:${elemento.weaknesses}</h2><br></br>

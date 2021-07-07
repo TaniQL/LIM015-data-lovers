@@ -1,85 +1,160 @@
 @import url('https://fonts.googleapis.com/css2?family=Revalia&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+max-width: 1400px;
 
+}
+/* Estilo del header */
 header{
-    display: flex;
-    background-color: #F5DB13;
-    box-shadow: 0px 4px 4px rgba(121, 83, 83, 0.25);
-	justify-content: space-around;
+display: flex;
+background-color: #F5DB13;
+box-shadow: 0px 4px 4px rgba(121, 83, 83, 0.25);
+justify-content: space-around;
 }
 
 header .img{
-    display:flex;
+display:flex;
 }
-
+/* Estilos de la sección home */
 main {
-    background-color: #fff;
+background-color: #fff;
 }
 
 .btnHeader{
-	display:flex;
-	border: transparent;
-	background-color:#F5DB13;
-	font-family: 'Revalia';
-	font-size: 25px;
+display:flex;
+border: transparent;
+background-color:#F5DB13;
+font-family: 'Revalia';
+font-size: 25px;
 }
 
 .btnHeader:hover {
-    cursor: pointer;
-    transform: scale(1.015);
-}
-.container-home{
-	position: absolute;
-	width: 1260px;
-	height: 610px;
-	left: 68px;
-	top: 119px;
-	background: #F2B807;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+cursor: pointer;
+transform: scale(1.015);
 }
 
-.container-welcome{
-	position: relative;
-	width: 669px;
-	height: 399px;
-	left: 138px;
-	top: 235px;
-	background: #F28F16;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	align-items: center;
-	justify-content: center;
+.container-home{
+position: absolute;
+width: 1260px;
+height: 510px;
+margin: 40px;
+background: #F2B807;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .imgPikachu{
 position: relative;
+left: 740px;
+}
+
+.container-welcome{
+position: absolute;
+width: 669px;
+height: 399px;
+left: 48px;
+top: 60px;
+background: #F28F16;
+align-items: center;
+justify-content: center;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+p{
+font-family: 'Revalia';
+font-size: 85px;
+margin: 20px;
+padding: 10px;
+text-align: center;
+color:#FFF;}
+
+
+/* Estilo de la sección Pokedex */
+
+.cardPokemon-front{
+background: #70A83B;
+border-radius: 25px;
+width: 370px;
+height: 478px;
+margin: 40px;
+position: relative;
+font-family: 'Ropa Sans', sans-serif;
+
+}
+
+.namePokemon{
+	position: absolute;
+	width: 318px;
+	height: 41px;
+	left: 20px;
+	top: 20px;
+	text-transform: uppercase;
+	font-size:40px;
+}
+
+.numPokemon{
+position: absolute;
+left: 250px;
+top: 20px;
+font-size:40px;
+}
+
+.imgPokemon{
+	position: absolute;
+	width: 370px;
+	height: 306px;
+	top:75px;
+}
+
+.typePokemon {
+	position: relative;
+	align-content: center;
+	text-transform: uppercase;
+	background: #a299a3;
+	padding: 5px;
+	border-radius: 5px;
+	color: #fff;
+	top: 370px;
+	left: 70px;
+	font-size:30px;
+	width: 200px;
+
+}
+/* .imgPikachu{
+position: absolute;
 width: 634px;
 height: 632px;
 left: 807px;
 top: calc(50% - 632px/2 + 59.5px);
 /*background: url(PIKACHU.png);*/
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-z-index: 1;
-visibility: active;
-}
+/* z-index: 1;
+visibility: active; */
 
 
-.cardPokemon-front{
+/* .cardPokemon-Front{
+	display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2%;
+    margin: 0 20px;
+    font-size: 30px;
+    cursor: pointer; */
+
+/* .cardPokemon-front{
 background: linear-gradient(180deg, #70A83B 0%, rgba(112, 168, 59, 0) 100%);
 border-radius: 25px;
-position: absolute;
+position: relative;
 width: 370px;
 height: 478px;
 left: 51px;
 top: 223px;
+flex-direction: column;
+} */
 
-}
 
-.cardPokemon-back{
+/* .cardPokemon-back{
 position: absolute;
 width: 370px;
 height: 478px;
@@ -90,7 +165,7 @@ border-radius: 25px;
 flex-wrap: wrap;
 justify-content: center;
 margin: 0 auto;
-}
+} */
 
 
 /* .container-main {
@@ -98,7 +173,7 @@ margin: 0 auto;
 	font-family: 'Lato', sans-serif;
 } */
 
-/* 
+/*
 .container-main {
 	width: 90%;
 	max-width: 1000px;
