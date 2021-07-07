@@ -30,14 +30,14 @@ export const dataPokemon = (elemento) => {
   </div>
 
   <div class="cardPokemon-back">
-  <h2 class="region">Region:${elemento.generation.name}</h2>
-  <h2 class="resistant">Resistant:${elemento.resistant}</h2>
+  <h2 class="region">Region:${elemento.generation.name}</h2></br>
+  <h2 class="resistant">Resistant:${elemento.resistant}</h2></br>
   <h2 class="weakness">Weakness:${elemento.weaknesses}</h2><br></br>
-  <h2>Evolutions</h2>
-  <h3 class="evolution">${evolution}</h3>
-  <h3 class="next-evolution">${nextEvolution}</h3>
-  <h3 class="prev-evolution">${prevEvolution}</h3>
-  <h3 class="prev-evolution">${prevPrevEvolution}</h3><br></br>
+  <h2>Evolutions</h2></br>
+  <h3 class="evolution">${evolution}</h3></br>
+  <h3 class="next-evolution">${nextEvolution}</h3></br>
+  <h3 class="prev-evolution">${prevEvolution}</h3></br>
+  <h3 class="prev-evolution">${prevPrevEvolution}</h3><br>
   <input class="moreInfo" type="button" id="btnMoreInfo" value="More Info">
   </div>
   `

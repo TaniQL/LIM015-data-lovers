@@ -20,6 +20,7 @@ display:flex;
 }
 /* Estilos de la sección home */
 main {
+display: flex;
 background-color: #fff;
 }
 
@@ -32,11 +33,13 @@ font-size: 25px;
 }
 
 .btnHeader:hover {
+	display: flex;
 cursor: pointer;
 transform: scale(1.015);
 }
 
 .container-home{
+	display: flex;
 position: absolute;
 width: 1260px;
 height: 510px;
@@ -46,11 +49,13 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .imgPikachu{
+	display: flex;
 position: relative;
 left: 740px;
 }
 
 .container-welcome{
+	display: flex;
 position: absolute;
 width: 669px;
 height: 399px;
@@ -63,6 +68,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 p{
+	display: flex;
 font-family: 'Revalia';
 font-size: 85px;
 margin: 20px;
@@ -72,26 +78,32 @@ color:#FFF;}
 
 
 /* Estilo de la sección Pokedex */
+.container-pokedex{
+	display: flex;
+	flex-wrap: column-wrap;
+}
 
 .cardPokemon-front{
-background: #70A83B;
+display: flex;
+background: linear-gradient(180deg, #70A83B 0%, rgba(112, 168, 59, 0.838912) 16.11%, rgba(112, 168, 59, 0) 100%);
 border-radius: 25px;
 width: 370px;
 height: 478px;
 margin: 40px;
-position: relative;
+position: absolute;
 font-family: 'Ropa Sans', sans-serif;
+z-index: -1;
 
 }
 
 .namePokemon{
-	position: absolute;
-	width: 318px;
-	height: 41px;
-	left: 20px;
-	top: 20px;
-	text-transform: uppercase;
-	font-size:40px;
+position: absolute;
+width: 318px;
+height: 41px;
+left: 20px;
+top: 20px;
+text-transform: uppercase;
+font-size:40px;
 }
 
 .numPokemon{
@@ -102,26 +114,45 @@ font-size:40px;
 }
 
 .imgPokemon{
-	position: absolute;
-	width: 370px;
-	height: 306px;
-	top:75px;
+position: absolute;
+width: 350px;
+height: 306px;
+top:75px;
 }
 
 .typePokemon {
-	position: relative;
-	align-content: center;
-	text-transform: uppercase;
-	background: #a299a3;
-	padding: 5px;
-	border-radius: 5px;
-	color: #fff;
-	top: 370px;
-	left: 70px;
-	font-size:30px;
-	width: 200px;
-
+position: relative;
+align-content: center;
+text-transform: uppercase;
+background: #a299a3;
+padding: 5px;
+border-radius: 5px;
+color: #fff;
+top: 370px;
+left: 70px;
+font-size:30px;
+width: 200px;
 }
+
+.cardPokemon-back{
+	background: linear-gradient(180deg, #f5f5f5 0%, rgba(112, 168, 59, 0.838912) 16.11%, rgba(112, 168, 59, 0) 100%);
+	border-radius: 25px;
+	width: 370px;
+	height: 478px;
+	margin: 40px;
+	position: relative;
+	font-family: 'Ropa Sans', sans-serif;
+	z-index: 0;
+}
+
+.region{
+position:relative;
+text-align: left;
+}
+.resistant{
+position:relative;
+}
+
 /* .imgPikachu{
 position: absolute;
 width: 634px;
@@ -142,17 +173,6 @@ visibility: active; */
     font-size: 30px;
     cursor: pointer; */
 
-/* .cardPokemon-front{
-background: linear-gradient(180deg, #70A83B 0%, rgba(112, 168, 59, 0) 100%);
-border-radius: 25px;
-position: relative;
-width: 370px;
-height: 478px;
-left: 51px;
-top: 223px;
-flex-direction: column;
-} */
-
 
 /* .cardPokemon-back{
 position: absolute;
@@ -165,7 +185,7 @@ border-radius: 25px;
 flex-wrap: wrap;
 justify-content: center;
 margin: 0 auto;
-} */
+}  */
 
 
 /* .container-main {
