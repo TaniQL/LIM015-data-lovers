@@ -29,18 +29,18 @@ export const dataPokemon = (elemento) => {
   <h4 class="typePokemon">${elemento.type}</h4>
   </article>
 
-<article class="cardPokemon-back">
-<h2 class="region">Region:${elemento.generation.name}</h2>
-<h2 class="resistant">Resistant:${elemento.resistant}</h2>
-<h2 class="weakness">Weakness:${elemento.weaknesses}</h2><br></br>
-<h2>Evolutions</h2>
-<h3 class="evolution">${evolution}</h3>
-<h3 class="next-evolution">${nextEvolution}</h3>
-<h3 class="prev-evolution">${prevEvolution}</h3>
-<h3 class="prev-evolution">${prevPrevEvolution}</h3><br></br>
-<input class="moreInfo" type="button" id="btnMoreInfo" value="More Info">
-</article>
-`
+ <article class="cardPokemon-back">
+  <h2 class="region">Region:${elemento.generation.name}</h2>
+  <h2 class="resistant">Resistant:${elemento.resistant}</h2>
+  <h2 class="weakness">Weakness:${elemento.weaknesses}</h2><br></br>
+  <h2>Evolutions</h2>
+  <h3 class="evolution">${evolution}</h3>
+  <h3 class="next-evolution">${nextEvolution}</h3>
+  <h3 class="prev-evolution">${prevEvolution}</h3>
+  <h3 class="prev-evolution">${prevPrevEvolution}</h3><br></br>
+  <input class="moreInfo" type="button" id="btnMoreInfo" value="More Info">
+  </article>
+  `
   ;
 };
 
