@@ -9,24 +9,26 @@
       <header class="container-header">
 
       <img src="./data/imagen/logo.png" alt="logo de pokemon" width="140">
-      <input type="button" id="btnHome" value="Home">
+      <input type="button" id="btnHome" value="HOME" class="btnHeader">
       <label for="btnHome"></label>
-      <input type="button" id="btnPokedex" value="Pokedex">
+      <input type="button" id="btnPokedex" value="POKEDEX" class="btnHeader">
       <label for="btnPokedex"></label>
-      <span>TOP 10</span>
+      <input type="button" id="btnTop10" value="TOP10" class="btnHeader">
+      <label for="btnTop10"></label>
     </header>
 
     <main class ="container-main">
-      <section class="home" id="home">
-        <img src="./data/imagen/pikachu.png" alt="pikachu img" width="700"  id="imgPikachu">
-        <div class="welcome-container">
-          <div class="welcome">
-            <p>Welcome to the community</p>
+      <img src="./data/imagen/pikachu.png" alt="pikachu img" width="500"  id="imgPikachu" class="imgPikachu" >
+        <section class="container-home" id="home">
+          <div class="container-welcome">
+            <div class="welcome">
+              <p>Welcome to the community</p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      
 
-      <section class="pokedex" id="pokedex">
+      <section class="pokedex" id="pokedex" style="display:none">
         <div class="modal">
           <div class="modal-info">
           </div>
@@ -36,7 +38,7 @@
     </main>
 
 
-    <footer class="container-footer">
+    <footer class="container-footer" id="container-footer" style="display:none">
       <p>Creado por Tania y Mafer. LIM015</p>
     </footer>
 

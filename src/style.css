@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Revalia&display=swap');
+
 * {
 	padding: 0;
 	margin: 0;
@@ -8,18 +10,65 @@ header{
     display: flex;
     background-color: #F5DB13;
     box-shadow: 0px 4px 4px rgba(121, 83, 83, 0.25);
+	justify-content: space-around;
 }
 
 header .img{
     display:flex;
-    justify-content: left;
-    align-items: center;
 }
 
 main {
     background-color: #fff;
 }
 
+.btnHeader{
+	display:flex;
+	border: transparent;
+	background-color:#F5DB13;
+	font-family: 'Revalia';
+	font-size: 25px;
+}
+
+.btnHeader:hover {
+    cursor: pointer;
+    transform: scale(1.015);
+}
+.container-home{
+	position: absolute;
+	width: 1260px;
+	height: 610px;
+	left: 68px;
+	top: 119px;
+	background: #F2B807;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.container-welcome{
+	position: absolute;
+	width: 669px;
+	height: 399px;
+	left: 138px;
+	top: 235px;
+	background: #F28F16;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.imgPikachu{
+position: relative;
+width: 634px;
+height: 632px;
+left: 807px;
+top: calc(50% - 632px/2 + 59.5px);
+background: url(PIKACHU.png);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+z-index: 1;
+}
+
+
+.cardPokemon-front{
+background: linear-gradient(180deg, #70A83B 0%, rgba(112, 168, 59, 0) 100%);
+border-radius: 25px;
+}
 
 /* .container-main {
 	background-image: linear-gradient(120deg, #fff 0%, #c2e9fb 100%);
