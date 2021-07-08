@@ -31,7 +31,7 @@ width: 550px;
 border: transparent;
 background-color:#F5DB13;
 font-family: 'Revalia';
-font-size: 25px;
+font-size: 33px;
 }
 
 .btnHeader:hover {
@@ -39,16 +39,18 @@ cursor: pointer;
 transform: scale(1.015);
 }
 
-.container-main{
+.container-main,
+.container-mainPokedex{
 display: flex;
 justify-content: center;
 background-color: #fff;
 }
 
-.container-mainPokedex{
+/* .container-mainPokedex{
 display: flex;
 justify-content: center;
-}
+} */
+
 .container-home{
 display: flex;
 position: absolute;
@@ -88,7 +90,7 @@ color:#FFF;}
 
 
 /* Estilo de la sección Pokedex */
-.card-pokedex {
+.cardFrontPokemon {
 display: flex;
 flex-flow: row wrap;
 justify-content: center;
