@@ -7,14 +7,15 @@
   </head>
   <body>
       <header class="container-header">
-
-      <img src="./data/imagen/logo.png" alt="logo de pokemon" width="140">
-      <input type="button" id="btnHome" value="HOME" class="btnHeader">
-      <label for="btnHome"></label>
-      <input type="button" id="btnPokedex" value="POKEDEX" class="btnHeader">
-      <label for="btnPokedex"></label>
-      <input type="button" id="btnTop10" value="TOP10" class="btnHeader">
-      <label for="btnTop10"></label>
+        <img src="./data/imagen/logo.png" alt="logo de pokemon" width="180" class="header-img">
+      <div class="nav-bar">
+        <input type="button" id="btnHome" value="HOME" class="btnHeader">
+        <label for="btnHome"></label>
+        <input type="button" id="btnPokedex" value="POKEDEX" class="btnHeader">
+        <label for="btnPokedex"></label>
+        <input type="button" id="btnTop10" value="TOP10" class="btnHeader">
+        <label for="btnTop10"></label>
+        </div>
     </header>
 
     <main class ="container-main" id="container-main">
@@ -26,7 +27,8 @@
             </div>
           </div>
         </section>
-
+    </main>
+    <main class="container-mainPokedex">
         <section class="container-pokedex" id="containerPokedex" style="display:none" >
           <nav></nav>
           <input list="typeRegion" name="typeRegion" id="listTypeRegion" placeholder="Region">
@@ -34,7 +36,7 @@
             <option value ="Kanto"></option>
             <option value ="Johto"></option>
           </datalist>
-          
+
           <input list="typePokemon" name="typeRegion" id="listTypePokemon" placeholder="Type">
           <datalist id="typePokemon">
             <option value ="Poison"></option>
@@ -47,6 +49,7 @@
             <option value ="Electric"></option>
             <option value ="Ground"></option>
           </datalist>
+
           <section class="card-pokedex" id="cardPokedex" >
             <div class="modal">
               <div class="modal-info">
@@ -54,7 +57,7 @@
             </div>
           </section>
         </section>
-    </main>
+      </main>
 
 
     <footer class="container-footer" id="container-footer" style="display:none">

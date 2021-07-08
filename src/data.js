@@ -41,7 +41,6 @@ export const dataPokemon = (elemento) => {
   <input class="moreInfo" type="button" id="btnMoreInfo" value="More Info">
   </div>
   `
-  ;
 };
 
 
