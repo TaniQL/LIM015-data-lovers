@@ -6,7 +6,7 @@ import data from './data/pokemon/pokemon.js';
 const btnPokedex = document.getElementById("btnPokedex");
 const btnHome = document.getElementById("btnHome");
 const home = document.getElementById("home");
-const containerPokedex = document.getElementById("containerPokedex");
+const containerMainPokedex = document.getElementById("containerMainPokedex");
 const footer = document.getElementById("container-footer");
 
 //const imgPikachu = document.getElementById("imgPikachu");
@@ -14,20 +14,20 @@ const footer = document.getElementById("container-footer");
 
 btnPokedex.addEventListener("click",() => {
 home.style.display="none";
-containerPokedex.style.display="block";
+containerMainPokedex.style.display="block";
 footer.style.display="block";
 //imgPikachu.style.visibility = "hidden";
 });
 
 btnHome.addEventListener("click",() => {
-containerPokedex.style.display="none";
+containerMainPokedex.style.display="none";
 home.style.display="block";
 footer.style.display="none";
 //imgPikachu.style.visibility = "active";
 });
 
 //Extra la data del pokemon js
-document.getElementById("cardPokedex").innerHTML = data.pokemon.map(dataPokemon).join(" ");
+document.getElementById("cardFrontPokemon").innerHTML = data.pokemon.map(dataPokemon).join(" ");
 // const btnMoreInfo =document.querySelector('#btnMoreInfo');
 // btnMoreInfo.addEventListener("click",() => {
 // let cardFront = document.querySelector('#cardPokemonFront');

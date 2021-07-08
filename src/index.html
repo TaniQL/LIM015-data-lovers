@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-      <header class="container-header">
+    <header class="container-header">
         <img src="./data/imagen/logo.png" alt="logo de pokemon" width="180" class="header-img">
       <div class="nav-bar">
         <input type="button" id="btnHome" value="HOME" class="btnHeader">
@@ -19,25 +19,24 @@
     </header>
 
     <main class ="container-main" id="container-main">
-        <section class="container-home" id="home">
+      <section class="container-home" id="home">
           <img src="./data/imagen/pikachu.png" alt="pikachu img" width="520" height="560" id="imgPikachu" class="imgPikachu" >
           <div class="container-welcome">
             <div class="welcome">
               <p>¡Welcome to the community!</p>
             </div>
           </div>
-        </section>
+      </section>
     </main>
-    <main class="container-mainPokedex">
-        <section class="container-pokedex" id="containerPokedex" style="display:none">
-          <nav></nav>
-          <input list="typeRegion" name="typeRegion" id="listTypeRegion" placeholder="Region">
-          <datalist id="typeRegion">
-            <option value ="Kanto"></option>
-            <option value ="Johto"></option>
-          </datalist>
 
-          <input list="typePokemon" name="typeRegion" id="listTypePokemon" placeholder="Type">
+    <main class="container-mainPokedex" id="containerMainPokedex" style="display:none">
+      <section class="filterPokemon">
+          <input list="typeRegion" name="typeRegion" id="listTypeRegion" placeholder="Region">
+            <datalist id="typeRegion">
+              <option value ="Kanto"></option>
+              <option value ="Johto"></option>
+            </datalist>
+        <input list="typePokemon" name="typeRegion" id="listTypePokemon" placeholder="Type">
           <datalist id="typePokemon">
             <option value ="Poison"></option>
             <option value ="Grass"></option>
@@ -49,15 +48,17 @@
             <option value ="Electric"></option>
             <option value ="Ground"></option>
           </datalist>
+      </section>
 
-          <section class="card-pokedex" id="cardPokedex" >
-            <div class="modal">
-              <div class="modal-info">
-              </div>
-            </div>
-          </section>
+      <section class="cardsPokemon">
+        <section class="cardFrontPokemon" id="cardFrontPokemon" >
         </section>
-      </main>
+
+        <section class="cardBackPokemon" id="cardBackPokemon">
+        </section>
+      </section>
+
+    </main>
 
 
     <footer class="container-footer" id="container-footer" style="display:none">
