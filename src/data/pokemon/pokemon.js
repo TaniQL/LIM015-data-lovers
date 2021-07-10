@@ -2956,7 +2956,7 @@ export default {
   },
   {
     "num": "032",
-    "name": "nidoran ♂ (male)",
+    "name": "nidoran ♂ ( male )",
     "generation": {
       "num": "generation i",
       "name": "kanto"

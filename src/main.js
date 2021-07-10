@@ -1,4 +1,5 @@
-import { dataPokemonFront, dataPokemonBack } from './data.js';
+
+import { dataPokemon, filterPokemon } from './data.js';
 
 import data from './data/pokemon/pokemon.js';
 
@@ -8,9 +9,9 @@ const btnHome = document.getElementById("btnHome");
 const home = document.getElementById("home");
 const containerMainPokedex = document.getElementById("containerMainPokedex");
 const footer = document.getElementById("container-footer");
-const cardPokemon = document.getElementById("cardsPokemon");
-const cardFrontPokemon = document.getElementById("cardFrontPokemon");
-const cardBackPokemon = document.getElementById("cardBackPokemon");
+const allData = data.pokemon;
+const seleccionarRegion= document.getElementById("seleccionarRegion");
+const cardPokemon = document.getElementById("cardFrontPokemon");
 
 //const selectRegion = document.getElementById("listTypeRegion");
 //const imgPikachu = document.getElementById("imgPikachu");
@@ -30,12 +31,17 @@ footer.style.display="none";
 //imgPikachu.style.visibility = "active";
 });
 
-//Extra la data del pokemon js a una  la parte delantera de la tarjeta Pokemon
-document.getElementById("cardFrontPokemon").innerHTML = data.pokemon.map(dataPokemonFront).join(" ");
 
-//Extraer la data del pokemon JS a la parte trasera de la tarjeta Pokemon
-document.getElementById("cardBackPokemon").innerHTML = data.pokemon.map(dataPokemonBack).join(" ");
+seleccionarRegion.addEventListener("change", () => {
+let regionSeleccionada = seleccionarRegion.value;
+let dataFilter = filterPokemon(regionSeleccionada, allData);
+cardPokemon.innerHTML = " ";
+cardPokemon.innerHTML = dataFilter.map(dataPokemon).join(" ");
+})
 
+
+//Extra la data del pokemon js
+cardPokemon.innerHTML = data.pokemon.map(dataPokemon).join(" ");
 
 
 // const btnMoreInfo =document.querySelector('#btnMoreInfo');
@@ -54,9 +60,9 @@ document.getElementById("cardBackPokemon").innerHTML = data.pokemon.map(dataPoke
 //     }
 // });
 
-const mostrarFrente = () => {
-	if(cardsPokemon.classList.contains('active')){
-		cardsPokemon.classList.remove('active');
+//const mostrarFrente = () => {
+//	if(cardsPokemon.classList.contains('active')){
+	//	cardsPokemon.classList.remove('active');
 	}
 }
 // const mostrarBack = () => {
@@ -66,8 +72,8 @@ const mostrarFrente = () => {
 // }
 
 // * Rotacion del cardPokemon
-cardsPokemon.addEventListener('click', () => {
-    cardsPokemon.classList.toggle('active');
-    return console.log("puedegirar");
+//cardsPokemon.addEventListener('click', () => {
+  //  cardsPokemon.classList.toggle('active');
+  //  return console.log("puedegirar");
 });
 

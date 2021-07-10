@@ -46,11 +46,6 @@ justify-content: center;
 background-color: #fff;
 }
 
-/* .container-mainPokedex{
-display: flex;
-justify-content: center;
-} */
-
 .container-home{
 display: flex;
 position: absolute;
@@ -144,112 +139,11 @@ left: 70px;
 font-size:30px;
 height: 50px;
 }
- */
-/*************HASTA ACÁ FUNCIONA*******************/
-
-
-/* Sección trasera de la carta Pokemon*/ 
-
-/* .cardBackPokemon{
-display: flex;
-flex-flow: row wrap;
-justify-content: center;
-} */
-
-/* .cardPokemon-back{
-display: flex;
-background: linear-gradient(180deg, #70A83B 0%, rgba(112, 168, 59, 0.838912) 16.11%, rgba(112, 168, 59, 0) 100%);
-border-radius: 25px;
-width: 370px;
-height: 478px;
-position: relative;
-font-family: 'Ropa Sans', sans-serif;
-margin: 20px;
-}
-
-.region{
-position: absolute;
-width: 318px;
-height: 41px;
-left: 20px;
-top: 20px;
-text-transform: uppercase;
-font-size:40px;
-}
-
-.resistant{
-position: absolute;
-left: 250px;
-top: 20px;
-font-size:40px;
-} */
-
-/* .region{
-position:absolute;
-text-align: left;
-}
-.resistant{
-position:absolute;
-} */
-
-/* .imgPikachu{
-position: absolute;
-width: 634px;
-height: 632px;
-left: 807px;
-top: calc(50% - 632px/2 + 59.5px);
-/*background: url(PIKACHU.png);*/
-/* z-index: 1;
-visibility: active; */
-
-
-/* .cardPokemon-Front{
-	display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 2%;
-    margin: 0 20px;
-    font-size: 30px;
-    cursor: pointer; */
-
-
-/* .cardPokemon-back{
-position: absolute;
-width: 370px;
-height: 478px;
-left: 51px;
-top: 223px;
-background: linear-gradient(180deg, #70A83B 0%, rgba(112, 168, 59, 0.838912) 16.11%, rgba(112, 168, 59, 0) 100%);
-border-radius: 25px;
-flex-wrap: wrap;
-justify-content: center;
-margin: 0 auto;
-}  */
-
-
-/* .container-main {
-	background-image: linear-gradient(120deg, #fff 0%, #c2e9fb 100%);
-	font-family: 'Lato', sans-serif;
-} */
-
-/*
-.container-main {
-	width: 90%;
-	max-width: 1000px;
-	padding: 40px 20px;
-	margin: auto;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-} */
-
-
-
 
 
 /*** Prueba de diseño de CSS CardPokemon******/
 
-.cardsPokemon{
+/*.cardsPokemon{
 display: flex;
 width: 370px;
 height: 478px;
@@ -263,82 +157,4 @@ z-index: 1;
 
 .cardsPokemon.active {
 transform: rotateY(180deg);
-}
-
-.cardPokemon-front{
-	display: flex;
-	background: linear-gradient(180deg, #70A83B 0%, rgba(112, 168, 59, 0.838912) 16.11%, rgba(112, 168, 59, 0) 100%);
-	border-radius: 25px;
-	width: 370px;
-	height: 478px;
-	position: relative;
-	font-family: 'Ropa Sans', sans-serif;
-	margin: 20px;
-	justify-content: center;
-	z-index: 2;
-
-}
-
-.namePokemon{
-	position: absolute;
-	width: 318px;
-	height: 41px;
-	left: 20px;
-	top: 20px;
-	text-transform: uppercase;
-	font-size:40px;
-}
-
-.numPokemon{
-	position: absolute;
-	left: 250px;
-	top: 20px;
-	font-size:40px;
-}
-
-.imgPokemon{
-	position: absolute;
-	width: 350px;
-	height: 306px;
-	top:75px;
-}
-
-.typePokemon {
-	position: relative;
-	align-items: center;
-	text-transform: uppercase;
-	background: #a299a3;
-	/* padding: 5px; */
-	border-radius: 5px;
-	color: #fff;
-	top: 370px;
-	/* left: 30px; */
-	font-size:30px;
-	height: 50px;
-}
-
-.cardFrontPokemon .flexbox{
-	display: flex;
-	justify-content: space-between;
-
-}
-
-.cardPokemon-front.active {
- visibility: hidden;
-}
-
-.cardPokemon-back{
-	display: flex;
-	width: 370px;
-	height: 478px;
-	background: linear-gradient(180deg, #70A83B 0%, rgba(112, 168, 59, 0.838912) 16.11%, rgba(112, 168, 59, 0) 100%);
-	border-radius: 25px;
-	margin: 20px;
-	transform: rotateY(180deg);
-	/* z-index: -2; */
-	position: relative;
-	backface-visibility: hidden;
-
-}
-
-
+}*/
