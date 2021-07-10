@@ -11,10 +11,10 @@ export const dataPokemon = (elemento) => {
   </div>`
 };
 
-
-  export const anotherExample = () => {
-    return 'OMG';
-  };
+export const filterPokemon = (regionSeleccionada, allData) => {
+let dataFilterRegion = allData.filter(reg=>reg.generation.name == regionSeleccionada)
+return dataFilterRegion;
+};
 
 
   // let evolution = '';
