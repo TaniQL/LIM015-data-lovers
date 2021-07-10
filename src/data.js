@@ -1,15 +1,19 @@
 /* eslint-disable no-prototype-builtins */
 // estas funciones son de ejemplo
 
-export const dataPokemon = (elemento) => {
+/*Cara Delantera de la tarjeta*/
+
+export const dataPokemonFront = (elemento) => {
 
   return `<div class="cardPokemon-front" id="cardPokemonFront">
   <h1 class="namePokemon">${elemento.name}</h1>
   <h1 class="numPokemon">N°${elemento.num}</h1><br></br>
   <img src="${elemento.img}" alt="" class="imgPokemon">
-  <h4 class="typePokemon">${elemento.type}</h4>
+  <h1 class="typePokemon">${elemento.type}</h1>
   </div>`
 };
+
+/*Cara Delantera de la tarjeta*/
 
 export const filterPokemon = (regionSeleccionada, allData) => {
 let dataFilterRegion = allData.filter(reg=>reg.generation.name == regionSeleccionada)
@@ -47,3 +51,6 @@ return dataFilterRegion;
   // <h3 class="prev-evolution">${prevEvolution}</h3></br>
   // <h3 class="prev-evolution">${prevPrevEvolution}</h3><br>
   // <input class="moreInfo" type="button" id="btnMoreInfo" value="More Info">
+
+
+

@@ -11,6 +11,8 @@ describe('dataPokemon', () => {
   });
 });
 
+//Validar lo que retorne la función
+// Que dataPokemon retorne un tipo string
 
 describe('anotherExample', () => {
   it('is a function', () => {
