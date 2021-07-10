@@ -13,22 +13,18 @@ const allData = data.pokemon;
 const seleccionarRegion= document.getElementById("seleccionarRegion");
 const cardPokemon = document.getElementById("cardFrontPokemon");
 
-//const selectRegion = document.getElementById("listTypeRegion");
-//const imgPikachu = document.getElementById("imgPikachu");
 
 
 btnPokedex.addEventListener("click",() => {
 home.style.display="none";
 containerMainPokedex.style.display="block";
 footer.style.display="block";
-//imgPikachu.style.visibility = "hidden";
 });
 
 btnHome.addEventListener("click",() => {
 containerMainPokedex.style.display="none";
 home.style.display="block";
 footer.style.display="none";
-//imgPikachu.style.visibility = "active";
 });
 
 
@@ -44,23 +40,7 @@ cardPokemon.innerHTML = dataFilter.map(dataPokemon).join(" ");
 cardPokemon.innerHTML = data.pokemon.map(dataPokemon).join(" ");
 
 
-// const btnMoreInfo =document.querySelector('#btnMoreInfo');
-// btnMoreInfo.addEventListener("click",() => {
-// let cardFront = document.querySelector('#cardPokemonFront');
-// cardFront.style.display="none";
-// });
-
-// // Filtrar Data por Region
-// selectRegion.addEventListener("change", () => {
-//     let region = selectDirector.value;
-//     if (region == 'kanto') {
-//         return console.log("seleccionaste Kanto");
-//     } else {
-//         return console.log("seleccionaste Johto");
-//     }
-// });
-
-//const mostrarFrente = () => {
+/* /const mostrarFrente = () => {
 //	if(cardsPokemon.classList.contains('active')){
 	//	cardsPokemon.classList.remove('active');
 	}
@@ -75,5 +55,4 @@ cardPokemon.innerHTML = data.pokemon.map(dataPokemon).join(" ");
 //cardsPokemon.addEventListener('click', () => {
   //  cardsPokemon.classList.toggle('active');
   //  return console.log("puedegirar");
-});
-
+});*/

@@ -3,7 +3,7 @@
 
 /*Cara Delantera de la tarjeta*/
 
-export const dataPokemonFront = (elemento) => {
+export const dataPokemon = (elemento) => {
 
   return `<div class="cardPokemon-front" id="cardPokemonFront">
   <h1 class="namePokemon">${elemento.name}</h1>
@@ -13,13 +13,16 @@ export const dataPokemonFront = (elemento) => {
   </div>`
 };
 
-/*Cara Delantera de la tarjeta*/
+/* ---------------Function Filter Region --------------------*/
 
 export const filterPokemon = (regionSeleccionada, allData) => {
 let dataFilterRegion = allData.filter(reg=>reg.generation.name == regionSeleccionada)
 return dataFilterRegion;
 };
 
+
+
+/* -------------- Cara trasera de la tarjeta--------------------*/
 
   // let evolution = '';
   // let nextEvolution = '';
@@ -41,7 +44,7 @@ return dataFilterRegion;
   //   }
   // }
 
-  // <div class="cardPokemon-back">
+  // `<div class="cardPokemon-back">
   // <h2 class="region">Region:${elemento.generation.name}</h2></br>
   // <h2 class="resistant">Resistant:${elemento.resistant}</h2></br>
   // <h2 class="weakness">Weakness:${elemento.weaknesses}</h2><br></br>
@@ -51,6 +54,7 @@ return dataFilterRegion;
   // <h3 class="prev-evolution">${prevEvolution}</h3></br>
   // <h3 class="prev-evolution">${prevPrevEvolution}</h3><br>
   // <input class="moreInfo" type="button" id="btnMoreInfo" value="More Info">
+  //</div>`}
 
 
 
