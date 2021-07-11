@@ -1,5 +1,5 @@
 
-import { dataPokemon, filterPokemon } from './data.js';
+import { dataPokemon, filterPokemon, filterType } from './data.js';
 
 import data from './data/pokemon/pokemon.js';
 
@@ -12,7 +12,7 @@ const footer = document.getElementById("container-footer");
 const allData = data.pokemon;
 const seleccionarRegion= document.getElementById("seleccionarRegion");
 const cardPokemon = document.getElementById("cardFrontPokemon");
-
+const seleccionarTipo = document.getElementById("seleccionarTipo");
 
 
 btnPokedex.addEventListener("click",() => {
@@ -34,6 +34,13 @@ let dataFilter = filterPokemon(regionSeleccionada, allData);
 cardPokemon.innerHTML = " ";
 cardPokemon.innerHTML = dataFilter.map(dataPokemon).join(" ");
 })
+
+seleccionarTipo.addEventListener("change", () => {
+  let tipoSeleccionado = seleccionarTipo.value;
+  let dataFilter = filterType(tipoSeleccionado, allData);
+  cardPokemon.innerHTML = " ";
+  cardPokemon.innerHTML = dataFilter.map(dataPokemon).join(" ");
+  })
 
 
 //Extra la data del pokemon js

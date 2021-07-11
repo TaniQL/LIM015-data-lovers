@@ -20,6 +20,14 @@ let dataFilterRegion = allData.filter(reg=>reg.generation.name == regionSeleccio
 return dataFilterRegion;
 };
 
+/* ---------------Function Filter Region --------------------*/
+
+export const filterType = (tipoSeleccionado, allData) => {
+for ( var i = 0; i <2 ; i++){
+  let dataFilterType = allData.filter(tipo=> tipo.type[i] == tipoSeleccionado)
+  return dataFilterType;
+  }
+  };
 
 
 /* -------------- Cara trasera de la tarjeta--------------------*/
