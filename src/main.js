@@ -43,8 +43,9 @@ seleccionarTipo.addEventListener("change", () => {
   cardPokemon.innerHTML = dataFilter.map(dataPokemon).join(" ");
   })
 
-  seleccionarOrden.addEventListener("click", () => {
-    let dataSort = filterBySort(allData);
+  seleccionarOrden.addEventListener("change", () => {
+    let ordenSeleccionado = seleccionarOrden.value;
+    let dataSort = filterBySort(ordenSeleccionado, allData);
     cardPokemon.innerHTML = " ";
     cardPokemon.innerHTML = dataSort.map(dataPokemon).join(" ");
   })
