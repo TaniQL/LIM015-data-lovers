@@ -25,9 +25,15 @@ return dataFilterRegion;
 export const filterType = (tipoSeleccionado, allData) => {
 
   let dataFilterType = allData.filter(tipo=> tipo.type.includes(tipoSeleccionado));
-
   return dataFilterType;
   };
+
+export const filterBySort = (allData) => {
+  let dataSortName = allData.sort((num1, num2) => {
+  (num1.num - num2.num);
+  return dataSortName;
+  })
+};
 
 
 /* -------------- Cara trasera de la tarjeta--------------------*/
@@ -63,6 +69,3 @@ export const filterType = (tipoSeleccionado, allData) => {
   // <h3 class="prev-evolution">${prevPrevEvolution}</h3><br>
   // <input class="moreInfo" type="button" id="btnMoreInfo" value="More Info">
   //</div>`}
-
-
-

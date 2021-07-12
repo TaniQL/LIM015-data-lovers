@@ -1,5 +1,5 @@
 
-import { dataPokemon, filterPokemon, filterType } from './data.js';
+import { dataPokemon, filterPokemon, filterType, filterBySort} from './data.js';
 
 import data from './data/pokemon/pokemon.js';
 
@@ -13,6 +13,7 @@ const allData = data.pokemon;
 const seleccionarRegion= document.getElementById("seleccionarRegion");
 const cardPokemon = document.getElementById("cardFrontPokemon");
 const seleccionarTipo = document.getElementById("seleccionarTipo");
+const seleccionarOrden = document.getElementById("seleccionarOrden");
 
 
 btnPokedex.addEventListener("click",() => {
@@ -42,10 +43,14 @@ seleccionarTipo.addEventListener("change", () => {
   cardPokemon.innerHTML = dataFilter.map(dataPokemon).join(" ");
   })
 
+  seleccionarOrden.addEventListener("click", () => {
+    let dataSort = filterBySort(allData);
+    cardPokemon.innerHTML = " ";
+    cardPokemon.innerHTML = dataSort.map(dataPokemon).join(" ");
+  })
 
 //Extra la data del pokemon js
 cardPokemon.innerHTML = data.pokemon.map(dataPokemon).join(" ");
-
 
 //const mostrarFrente = () => {
 //	if(cardsPokemon.classList.contains('active')){
