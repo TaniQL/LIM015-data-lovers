@@ -20,11 +20,12 @@ let dataFilterRegion = allData.filter(reg=>reg.generation.name == regionSeleccio
 return dataFilterRegion;
 };
 
-/* ---------------Function Filter Region --------------------*/
+/* ---------------Function Filter Type --------------------*/
 
 export const filterType = (tipoSeleccionado, allData) => {
 
-  let dataFilterType = allData.filter(tipo => tipo.type.includes(tipoSeleccionado))
+  let dataFilterType = allData.filter(tipo=> tipo.type.includes(tipoSeleccionado));
+
   return dataFilterType;
   };
 
