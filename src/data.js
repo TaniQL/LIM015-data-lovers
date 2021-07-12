@@ -28,11 +28,12 @@ export const filterType = (tipoSeleccionado, allData) => {
   return dataFilterType;
   };
 
-export const filterBySort = (allData) => {
-  let dataSortName = allData.sort((num1, num2) => {
-  (num1.num - num2.num);
-  return dataSortName;
-  })
+export const filterBySort = (ordenSeleccionado, allData) => {
+  if(ordenSeleccionado === "a-z"){
+    return allData.sort((a, b) => (a.name > b.name) ? 1 : -1)
+  } else{
+    return allData.sort((a, b) => (b.name > a.name) ? 1 : -1)
+  }
 };
 
 
