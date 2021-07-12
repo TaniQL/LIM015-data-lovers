@@ -3,7 +3,7 @@
 
 /*Cara Delantera de la tarjeta*/
 
-export const dataPokemonFront = (elemento) => {
+export const dataPokemon = (elemento) => {
 
   return `<div class="cardPokemon-front" id="cardPokemonFront">
   <h1 class="namePokemon">${elemento.name}</h1>

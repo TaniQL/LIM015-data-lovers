@@ -63,8 +63,8 @@ cardPokemon.innerHTML = data.pokemon.map(dataPokemon).join(" ");
 //const mostrarFrente = () => {
 //	if(cardsPokemon.classList.contains('active')){
 	//	cardsPokemon.classList.remove('active');
-	}
-}
+	//}
+//}
 // const mostrarBack = () => {
 //     if(cardPokemon-back.classList.contains('active')){
 // 		cardPokemon-back.classList.remove('active');
@@ -75,5 +75,5 @@ cardPokemon.innerHTML = data.pokemon.map(dataPokemon).join(" ");
 //cardsPokemon.addEventListener('click', () => {
   //  cardsPokemon.classList.toggle('active');
   //  return console.log("puedegirar");
-});
+//});
 
