@@ -28,6 +28,7 @@ export const filterType = (tipoSeleccionado, allData) => {
   return dataFilterType;
   };
 
+  /* ---------------Function Sort--------------------*/
 export const filterBySort = (ordenSeleccionado, allData) => {
   if(ordenSeleccionado === "a-z"){
     return allData.sort((a, b) => (a.name > b.name) ? 1 : -1)

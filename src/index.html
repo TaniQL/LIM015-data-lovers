@@ -32,10 +32,12 @@
     <main class="container-mainPokedex" id="containerMainPokedex" style="display:none">
       <section class="filterPokemon">
         <select id="seleccionarRegion">
+          <option disabled selected>Seleccionar Región</option>
           <option value="johto">Johto</option>
           <option value="kanto">Kanto</option>
         </select>
         <select id="seleccionarTipo" name="Tipo">
+          <option disabled selected>Seleccionar Tipo</option>
           <option value="grass">Grass</option>
           <option value="poison">Poison</option>
           <option value="water">Water</option>
@@ -53,9 +55,12 @@
         </select>
 
         <select id="seleccionarOrden">
+        <option disabled selected>Ordenar por</option>
         <option value="a-z">ordenar a-z</option>
         <option value="z-a">ordenar z-a</option>
         </select>
+
+        <input type="button" id="cleanFilter" value="Limpiar Filtros">
 
         <br>
 
