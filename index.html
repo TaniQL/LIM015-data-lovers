@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>.:Pokemon:.</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="container-header">
+        <img src="./data/imagen/logo.png" alt="logo de pokemon" width="180" class="header-img">
+      <div class="nav-bar">
+        <input type="button" id="btnHome" value="HOME" class="btnHeader">
+        <label for="btnHome"></label>
+        <input type="button" id="btnPokedex" value="POKEDEX" class="btnHeader">
+        <label for="btnPokedex"></label>
+        <input type="button" id="btnTop10" value="TOP10" class="btnHeader">
+        <label for="btnTop10"></label>
+        </div>
+    </header>
+
+    <main class ="container-main" id="container-main">
+      <section class="container-home" id="home">
+          <img src="./data/imagen/pikachu.png" alt="pikachu img" width="520" height="560" id="imgPikachu" class="imgPikachu" >
+          <div class="container-welcome">
+            <div class="welcome">
+              <p>Welcome to the community!</p>
+            </div>
+          </div>
+      </section>
+    </main>
+
+    <main class="container-mainPokedex" id="containerMainPokedex" style="display:none">
+      <section class="filterPokemon">
+        <select id="seleccionarRegion">
+          <option disabled selected>Seleccionar Región</option>
+          <option value="johto">Johto</option>
+          <option value="kanto">Kanto</option>
+        </select>
+        <select id="seleccionarTipo" name="Tipo">
+          <option disabled selected>Seleccionar Tipo</option>
+          <option value="grass">Grass</option>
+          <option value="poison">Poison</option>
+          <option value="water">Water</option>
+          <option value="flying">Flying</option>
+          <option value="bug">Bug</option>
+          <option value="normal">Normal</option>
+          <option value="electric">Electric</option>
+          <option value="ground">Ground</option>
+          <option value="psychic">Psychic</option>
+          <option value="fighting">Fighting</option>
+          <option value="rock">Rock</option>
+          <option value="ghost">Ghost</option>
+          <option value="ice">Ice</option>
+          <option value="dragon">Dragon</option>
+        </select>
+
+        <select id="seleccionarOrden">
+        <option disabled selected>Ordenar por</option>
+        <option value="a-z">ordenar a-z</option>
+        <option value="z-a">ordenar z-a</option>
+        </select>
+
+        <input type="button" id="cleanFilter" value="Limpiar Filtros">
+
+        <br>
+
+      </section>
+
+      <section class="cardsPokemon" id="cardsPokemon">
+        <div class="cardFrontPokemon" id="cardFrontPokemon" >
+        </div>
+
+        <div class="cardBackPokemon" id="cardBackPokemon">
+        </div>
+      </section>
+
+    </main>
+
+
+    <footer class="container-footer" id="container-footer" style="display:none">
+      <p>Creado por Tania y Mafer. LIM015</p>
+    </footer>
+
+    <div id="root"></div>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
