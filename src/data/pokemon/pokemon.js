@@ -16592,7 +16592,7 @@ export default {
       "name": "johto"
     },
     "about": "Lanturn is nicknamed \"the deep-sea star for its illuminated antenna. This Pokémon produces light by causing a chemical reaction between bacteria and its bodily fluids inside the antenna.",
-    "img": "https://www.serebii.net/pokemongo/pokemon/171.png",
+    "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/171.png",
     "size": {
       "height": "1.19 m",
       "weight": "22.5 kg"

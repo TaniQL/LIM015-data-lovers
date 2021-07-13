@@ -10,10 +10,10 @@ const home = document.getElementById("home");
 const containerMainPokedex = document.getElementById("containerMainPokedex");
 const footer = document.getElementById("container-footer");
 const allData = data.pokemon;
-const seleccionarRegion= document.getElementById("seleccionarRegion");
-const cardPokemon = document.getElementById("cardFrontPokemon");
-const seleccionarTipo = document.getElementById("seleccionarTipo");
-const seleccionarOrden = document.getElementById("seleccionarOrden");
+let seleccionarRegion= document.getElementById("seleccionarRegion");
+let cardPokemon = document.getElementById("cardFrontPokemon");
+let seleccionarTipo = document.getElementById("seleccionarTipo");
+let seleccionarOrden = document.getElementById("seleccionarOrden");
 const limpiarFiltro = document.getElementById("cleanFilter");
 
 btnPokedex.addEventListener("click",() => {
@@ -28,6 +28,11 @@ home.style.display="block";
 footer.style.display="none";
 });
 
+/*----------------- Extraer la data de Pokemon.js------------------------*/
+
+cardPokemon.innerHTML = allData.map(dataPokemon).join(" ");
+
+
 /*----------------- Function Filter por región y tipo------------------------*/
 seleccionarRegion.addEventListener("change", () => {
 let regionSeleccionada = seleccionarRegion.value;
@@ -36,7 +41,7 @@ cardPokemon.innerHTML = " ";
 cardPokemon.innerHTML = dataFilter.map(dataPokemon).join(" ");
 })
 
-seleccionarTipo.addEventListener("change", () => {
+seleccionarTipo.addEventListener("click", () => {
   let tipoSeleccionado = seleccionarTipo.value;
   let dataFilter = filterType(tipoSeleccionado, allData);
   cardPokemon.innerHTML = " ";
@@ -52,18 +57,10 @@ seleccionarOrden.addEventListener("change", () => {
   cardPokemon.innerHTML = dataSort.map(dataPokemon).join(" ");
   })
 
+
+
 /*----------------- Function Limpiar Filtros----------------*/
-  cleanFilter.addEventListener("click",function(e){
-    e.preventDefault();
-    e.stopPropagation();
-    cardPokemon.innerHTML = " ";
-    cardPokemon.innerHTML = data.pokemon.map(dataPokemon).join(" ");
-    });
-/*----------------- Extraer la data de Pokemon.js------------------------*/
-cardPokemon.innerHTML = data.pokemon.map(dataPokemon).join(" ");
-
-
-
+limpiarFiltro.addEventListener("click",dataPokemon);
 
 
 //const mostrarFrente = () => {
