@@ -41,6 +41,7 @@ showPokemon();
 });
 
 btnTop10.addEventListener("click", () => {
+//let legendarios = 
 containerMainPokedex.style.display="none";
 containerHome.style.display="none";
 containerTop10.style.display="block";
@@ -53,6 +54,8 @@ let regionSeleccionada = seleccionarRegion.value;
 let dataFilter = filterPokemon(regionSeleccionada, allData);
 cardPokemon.innerHTML = " ";
 cardPokemon.innerHTML = dataFilter.map(dataPokemon).join(" ");
+seleccionarOrden.selectedIndex = 0;
+seleccionarTipo.selectedIndex = 0;
 })
 
 seleccionarTipo.addEventListener("click", () => {
