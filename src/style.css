@@ -31,7 +31,7 @@ width: 550px;
 border: transparent;
 background-color:#F5DB13;
 font-family: 'Revalia';
-font-size: 33px;
+font-size: 29px;
 }
 
 .btnHeader:hover {
@@ -49,15 +49,15 @@ background-color: #fff;
 .container-home{
 display: flex;
 position: absolute;
-width: 90%;
+width: 80%;
 height: 510px;
-margin: 40px;
+margin: 25px;
 background: #F2B807;
 }
 
 .imgPikachu{
 position: relative;
-left: 900px;
+left: 700px;
 }
 
 .container-welcome{

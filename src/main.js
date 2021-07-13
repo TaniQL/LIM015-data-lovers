@@ -1,5 +1,5 @@
 
-import { dataPokemon, filterPokemon, filterType, filterBySort} from './data.js';
+import { dataPokemon, filterPokemon, filterType, filterBySort, computeStats} from './data.js';
 
 import data from './data/pokemon/pokemon.js';
 
@@ -7,42 +7,45 @@ import data from './data/pokemon/pokemon.js';
 const btnPokedex = document.getElementById("btnPokedex");
 const btnHome = document.getElementById("btnHome");
 const btnTop10 = document.getElementById("btnTop10");
-const home = document.getElementById("home");
+const containerHome = document.getElementById("containerHome");
 const containerMainPokedex = document.getElementById("containerMainPokedex");
+const containerTop10 = document.getElementById("containerTop10")
 const footer = document.getElementById("container-footer");
 const allData = data.pokemon;
 const seleccionarRegion= document.getElementById("seleccionarRegion");
-const cardPokemon = document.getElementById("cardFrontPokemon");
+let cardPokemon = document.getElementById("cardFrontPokemon");
 const seleccionarTipo = document.getElementById("seleccionarTipo");
 const seleccionarOrden = document.getElementById("seleccionarOrden");
 const cleanFilter = document.getElementById("cleanFilter");
-/*----------------- Extraer la data de Pokemon.js------------------------*/
+
+/*----------------- Mostrar la data de Pokemon.js------------------------*/
 const showPokemon  =() =>{
-  cardPokemon.innerHTML = "";
-  cardPokemon.innerHTML = data.pokemon.map(dataPokemon).join(" ");
+cardPokemon.innerHTML = "";
+cardPokemon.innerHTML = allData.map(dataPokemon).join(" ");
 }
 
 /*----------------- Botones del Header ------------------------*/
+btnHome.addEventListener("click",() => {
+containerMainPokedex.style.display="none";
+containerTop10.style.display="none";
+containerHome.style.display="block";
+footer.style.display="none";
+});
+
 btnPokedex.addEventListener("click",() => {
-home.style.display="none";
+containerHome.style.display="none";
 containerMainPokedex.style.display="block";
+containerTop10.style.display="none";
 footer.style.display="block";
 showPokemon();
 });
 
-btnHome.addEventListener("click",() => {
-containerMainPokedex.style.display="none";
-home.style.display="block";
-footer.style.display="none";
-});
-
 btnTop10.addEventListener("click", () => {
 containerMainPokedex.style.display="none";
-home.style.display="none";
+containerHome.style.display="none";
+containerTop10.style.display="block";
 footer.style.display="none";
 });
-
-
 
 /*----------------- Function Filter por región y tipo------------------------*/
 seleccionarRegion.addEventListener("change", () => {
@@ -52,32 +55,37 @@ cardPokemon.innerHTML = " ";
 cardPokemon.innerHTML = dataFilter.map(dataPokemon).join(" ");
 })
 
-seleccionarTipo.addEventListener("change", () => {
-  let tipoSeleccionado = seleccionarTipo.value;
-  let dataFilter = filterType(tipoSeleccionado, allData);
-  cardPokemon.innerHTML = " ";
-  cardPokemon.innerHTML = dataFilter.map(dataPokemon).join(" ");
-  })
+seleccionarTipo.addEventListener("click", () => {
+let tipoSeleccionado = seleccionarTipo.value;
+let dataFilter = filterType(tipoSeleccionado, allData);
+cardPokemon.innerHTML = " ";
+cardPokemon.innerHTML = dataFilter.map(dataPokemon).join(" ");
+seleccionarRegion.selectedIndex = 0;
+seleccionarOrden.selectedIndex = 0;
+})
 
 
 /*----------------- Function Sort por nombre ascendente y descendente----------------*/
 seleccionarOrden.addEventListener("change", () => {
-  let ordenSeleccionado = seleccionarOrden.value;
-  let dataSort = filterBySort(ordenSeleccionado, allData);
-  cardPokemon.innerHTML = " ";
-  cardPokemon.innerHTML = dataSort.map(dataPokemon).join(" ");
-  })
+let ordenSeleccionado = seleccionarOrden.value;
+let dataSort = filterBySort(ordenSeleccionado, allData);
+cardPokemon.innerHTML = " ";
+cardPokemon.innerHTML = dataSort.map(dataPokemon).join(" ");
+seleccionarTipo.selectedIndex = 0;
+seleccionarRegion.selectedIndex = 0;
+})
 
 /*----------------- Function Limpiar Filtros----------------*/
 cleanFilter.addEventListener("click", () => {
-    //e.preventDefault();
-    //e.stopPropagation();
-    cardPokemon.innerHTML = " ";
-    cardPokemon.innerHTML = data.pokemon.map(dataPokemon).join(" ");
-    });
+cardPokemon.innerHTML = " ";
+cardPokemon.innerHTML = data.pokemon.map(dataPokemon).join(" ");
+seleccionarOrden.selectedIndex = 0;
+seleccionarTipo.selectedIndex = 0;
+seleccionarRegion.selectedIndex = 0;
+});
 
-
-
+/*----------------- Function calcular----------------*/
+computeStats.addEventListener()
 
 //const mostrarFrente = () => {
 //	if(cardsPokemon.classList.contains('active')){
