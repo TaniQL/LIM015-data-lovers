@@ -30,10 +30,14 @@ export const filterType = (tipoSeleccionado, allData) => {
 
   /* ---------------Function Sort--------------------*/
 export const filterBySort = (ordenSeleccionado, allData) => {
+  let orderAZ = Array.from(allData);
+  let orderZA = Array.from(allData);
+  orderAZ =orderAZ.sort((a, b) => (a.name > b.name) ? 1 : -1);
+  orderZA =orderZA.sort((a, b) => (b.name > a.name) ? 1 : -1);
   if(ordenSeleccionado === "a-z"){
-    return allData.sort((a, b) => (a.name > b.name) ? 1 : -1)
+    return orderAZ;
   } else{
-    return allData.sort((a, b) => (b.name > a.name) ? 1 : -1)
+    return orderZA;
   }
 };
 

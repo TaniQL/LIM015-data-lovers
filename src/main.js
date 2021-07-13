@@ -6,6 +6,7 @@ import data from './data/pokemon/pokemon.js';
 /*----------------- Mostrar y ocultar secciones del HTML------------------------*/
 const btnPokedex = document.getElementById("btnPokedex");
 const btnHome = document.getElementById("btnHome");
+const btnTop10 = document.getElementById("btnTop10");
 const home = document.getElementById("home");
 const containerMainPokedex = document.getElementById("containerMainPokedex");
 const footer = document.getElementById("container-footer");
@@ -14,12 +15,19 @@ const seleccionarRegion= document.getElementById("seleccionarRegion");
 const cardPokemon = document.getElementById("cardFrontPokemon");
 const seleccionarTipo = document.getElementById("seleccionarTipo");
 const seleccionarOrden = document.getElementById("seleccionarOrden");
-const limpiarFiltro = document.getElementById("cleanFilter");
+const cleanFilter = document.getElementById("cleanFilter");
+/*----------------- Extraer la data de Pokemon.js------------------------*/
+const showPokemon  =() =>{
+  cardPokemon.innerHTML = "";
+  cardPokemon.innerHTML = data.pokemon.map(dataPokemon).join(" ");
+}
 
+/*----------------- Botones del Header ------------------------*/
 btnPokedex.addEventListener("click",() => {
 home.style.display="none";
 containerMainPokedex.style.display="block";
 footer.style.display="block";
+showPokemon();
 });
 
 btnHome.addEventListener("click",() => {
@@ -27,6 +35,14 @@ containerMainPokedex.style.display="none";
 home.style.display="block";
 footer.style.display="none";
 });
+
+btnTop10.addEventListener("click", () => {
+containerMainPokedex.style.display="none";
+home.style.display="none";
+footer.style.display="none";
+});
+
+
 
 /*----------------- Function Filter por región y tipo------------------------*/
 seleccionarRegion.addEventListener("change", () => {
@@ -53,15 +69,12 @@ seleccionarOrden.addEventListener("change", () => {
   })
 
 /*----------------- Function Limpiar Filtros----------------*/
-  cleanFilter.addEventListener("click",function(e){
-    e.preventDefault();
-    e.stopPropagation();
+cleanFilter.addEventListener("click", () => {
+    //e.preventDefault();
+    //e.stopPropagation();
     cardPokemon.innerHTML = " ";
     cardPokemon.innerHTML = data.pokemon.map(dataPokemon).join(" ");
     });
-/*----------------- Extraer la data de Pokemon.js------------------------*/
-cardPokemon.innerHTML = data.pokemon.map(dataPokemon).join(" ");
-
 
 
 
