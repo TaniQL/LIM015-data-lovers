@@ -23,10 +23,9 @@ return dataFilterRegion;
 /* ---------------Function Filter Type --------------------*/
 
 export const filterType = (tipoSeleccionado, allData) => {
-
-  let dataFilterType = allData.filter(tipo=> tipo.type.includes(tipoSeleccionado));
-  return dataFilterType;
-  };
+let dataFilterType = allData.filter(tipo=> tipo.type.includes(tipoSeleccionado));
+return dataFilterType;
+};
 
   /* ---------------Function Sort--------------------*/
 export const filterBySort = (ordenSeleccionado, allData) => {
@@ -41,6 +40,7 @@ export const filterBySort = (ordenSeleccionado, allData) => {
   }
 };
 
+export const computeStats = () => {}
 
 /* -------------- Cara trasera de la tarjeta--------------------*/
 
