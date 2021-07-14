@@ -6,7 +6,7 @@ import data from './data/pokemon/pokemon.js';
 /*----------------- Mostrar y ocultar secciones del HTML------------------------*/
 const btnPokedex = document.getElementById("btnPokedex");
 const btnHome = document.getElementById("btnHome");
-const btnTop10 = document.getElementById("btnTop10");
+const btnInfo = document.getElementById("btnInfo");
 const containerHome = document.getElementById("containerHome");
 const containerMainPokedex = document.getElementById("containerMainPokedex");
 const containerTop10 = document.getElementById("containerTop10");
@@ -44,7 +44,7 @@ footer.style.display="block";
 showPokemon();
 });
 
-btnTop10.addEventListener("click", () => {
+btnInfo.addEventListener("click", () => {
 filterOptions.style.display="none";
 containerMainPokedex.style.display="none";
 containerHome.style.display="none";
@@ -55,7 +55,7 @@ let top10 = computeStats(rarity,allData);
 let x = top10.length;
 let y = parseInt(((x/251)*100));
 infoExtra.innerHTML=" ";
-infoExtra.innerHTML = "Sabias que el " + y + "%" + " de los pokemones son legendarios";
+infoExtra.innerHTML = "Sabias que solo el " + y + "%" + " de los pokemones son legendarios";
 pokemontTop10.innerHTML = " ";
 pokemontTop10.innerHTML = top10.map(dataPokemon).join(" ");
 });
