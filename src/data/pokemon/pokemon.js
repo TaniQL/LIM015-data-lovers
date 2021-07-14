@@ -8673,7 +8673,7 @@ export default {
       "name": "kanto"
     },
     "about": "From Muk's body seeps a foul fluid that gives off a nose-bendingly horrible stench. Just one drop of this Pokémon's body fluid can turn a pool stagnant and rancid.",
-    "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/090.png",
+    "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/089.png",
     "size": {
       "height": "1.19 m",
       "weight": "30.0 kg"
@@ -12362,7 +12362,7 @@ export default {
       "name": "kanto"
     },
     "about": "In battle, Magmar blows out intensely hot flames from all over its body to intimidate its opponent. This Pokémon's fiery bursts create heat waves that ignite grass and trees in its surroundings.",
-    "img": "https://www.serebii.net/pokemongo/pokemon/126.png",
+    "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/126.png",
     "size": {
       "height": "1.30 m",
       "weight": "44.5 kg"
