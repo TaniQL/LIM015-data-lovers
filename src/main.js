@@ -9,7 +9,8 @@ const btnHome = document.getElementById("btnHome");
 const btnTop10 = document.getElementById("btnTop10");
 const containerHome = document.getElementById("containerHome");
 const containerMainPokedex = document.getElementById("containerMainPokedex");
-const containerTop10 = document.getElementById("containerTop10")
+const containerTop10 = document.getElementById("containerTop10");
+const filterOptions =document.getElementById("filterOptions");
 const footer = document.getElementById("container-footer");
 const allData = data.pokemon;
 const seleccionarRegion= document.getElementById("seleccionarRegion");
@@ -33,6 +34,7 @@ footer.style.display="none";
 });
 
 btnPokedex.addEventListener("click",() => {
+filterOptions.style.display="block";
 containerHome.style.display="none";
 containerMainPokedex.style.display="block";
 containerTop10.style.display="none";
@@ -41,11 +43,18 @@ showPokemon();
 });
 
 btnTop10.addEventListener("click", () => {
-//let legendarios = 
-containerMainPokedex.style.display="none";
+filterOptions.style.display="none";
+containerMainPokedex.style.display="block";
 containerHome.style.display="none";
 containerTop10.style.display="block";
 footer.style.display="none";
+let rarity = "legendary";
+let top10 = computeStats(rarity,allData);
+cardPokemon.innerHTML = " ";
+cardPokemon.innerHTML = top10.map(dataPokemon).join(" ");
+let x = top10.length;
+let y = parseInt(((x/251)*100));
+console.log ("sabías que" + y);
 });
 
 /*----------------- Function Filter por región y tipo------------------------*/
@@ -87,8 +96,6 @@ seleccionarTipo.selectedIndex = 0;
 seleccionarRegion.selectedIndex = 0;
 });
 
-/*----------------- Function calcular----------------*/
-computeStats.addEventListener()
 
 //const mostrarFrente = () => {
 //	if(cardsPokemon.classList.contains('active')){
