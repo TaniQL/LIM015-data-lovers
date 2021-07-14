@@ -139,6 +139,27 @@ font-size:30px;
 height: 50px;
 }
 
+.messageCalcular{
+    background: #F2B807;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    font-family: 'Revalia';
+    font-size: 28px;
+    text-align:center;
+    justify-content: center;
+    height: 50px;
+    
+}
+
+.container-footer{
+    background: #F2B807;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    font-family: 'Revalia';
+    font-size: 10px;
+    text-align:center;
+    height: 25px;
+}
 
 /*** Prueba de diseño de CSS CardPokemon******/
 

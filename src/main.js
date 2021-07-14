@@ -18,12 +18,14 @@ let cardPokemon = document.getElementById("cardFrontPokemon");
 const seleccionarTipo = document.getElementById("seleccionarTipo");
 const seleccionarOrden = document.getElementById("seleccionarOrden");
 const cleanFilter = document.getElementById("cleanFilter");
+let infoExtra = document.getElementById("infoExtra");
+const pokemontTop10 = document.getElementById("pokemontTop10");
 
 /*----------------- Mostrar la data de Pokemon.js------------------------*/
 const showPokemon  =() =>{
 cardPokemon.innerHTML = "";
 cardPokemon.innerHTML = allData.map(dataPokemon).join(" ");
-}
+};
 
 /*----------------- Botones del Header ------------------------*/
 btnHome.addEventListener("click",() => {
@@ -44,17 +46,18 @@ showPokemon();
 
 btnTop10.addEventListener("click", () => {
 filterOptions.style.display="none";
-containerMainPokedex.style.display="block";
+containerMainPokedex.style.display="none";
 containerHome.style.display="none";
 containerTop10.style.display="block";
-footer.style.display="none";
+footer.style.display="block";
 let rarity = "legendary";
 let top10 = computeStats(rarity,allData);
-cardPokemon.innerHTML = " ";
-cardPokemon.innerHTML = top10.map(dataPokemon).join(" ");
 let x = top10.length;
 let y = parseInt(((x/251)*100));
-console.log ("sabías que" + y);
+infoExtra.innerHTML=" ";
+infoExtra.innerHTML = "Sabias que el " + y + "%" + " de los pokemones son legendarios";
+pokemontTop10.innerHTML = " ";
+pokemontTop10.innerHTML = top10.map(dataPokemon).join(" ");
 });
 
 /*----------------- Function Filter por región y tipo------------------------*/
@@ -65,7 +68,7 @@ cardPokemon.innerHTML = " ";
 cardPokemon.innerHTML = dataFilter.map(dataPokemon).join(" ");
 seleccionarOrden.selectedIndex = 0;
 seleccionarTipo.selectedIndex = 0;
-})
+});
 
 seleccionarTipo.addEventListener("click", () => {
 let tipoSeleccionado = seleccionarTipo.value;
@@ -74,7 +77,7 @@ cardPokemon.innerHTML = " ";
 cardPokemon.innerHTML = dataFilter.map(dataPokemon).join(" ");
 seleccionarRegion.selectedIndex = 0;
 seleccionarOrden.selectedIndex = 0;
-})
+});
 
 
 /*----------------- Function Sort por nombre ascendente y descendente----------------*/
@@ -85,7 +88,7 @@ cardPokemon.innerHTML = " ";
 cardPokemon.innerHTML = dataSort.map(dataPokemon).join(" ");
 seleccionarTipo.selectedIndex = 0;
 seleccionarRegion.selectedIndex = 0;
-})
+});
 
 /*----------------- Function Limpiar Filtros----------------*/
 cleanFilter.addEventListener("click", () => {
@@ -111,4 +114,4 @@ seleccionarRegion.selectedIndex = 0;
 // * Rotacion del cardPokemon
 //cardsPokemon.addEventListener('click', () => {
   //  cardsPokemon.classList.toggle('active');
-  //  return console.log("puedegirar");
+  //  return console.log("puedegirar")
