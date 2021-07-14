@@ -40,10 +40,6 @@ export const filterBySort = (ordenSeleccionado, allData) => {
   }
 };
 
-export const computeStats = (legendarios,allData) => {
-  let filterLegendarios = Array.from(allData);
-  filterLegendarios = filterLegendarios.filter( leg => leg)
-}
 
 /* -------------- Cara trasera de la tarjeta--------------------*/
 
