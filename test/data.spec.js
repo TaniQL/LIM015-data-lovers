@@ -5,9 +5,9 @@ describe('dataPokemon', () => {
     expect(typeof dataPokemon).toBe('function');
   });
 
-  // it.skip('returns `example`', () => {
-  // //  expect(dataPokemon()).toBe('dataPokemon');
-  // });
+  it('debería retornar String para dataPokemon.name', () => {
+    expect(typeof dataPokemon.name).toBe('string');
+  });
 });
 
 describe('filterPokemon', () => {
@@ -39,7 +39,3 @@ describe('filterBySort', () => {
   // //  expect(dataPokemon()).toBe('dataPokemon');
   // });
 });
-
-//Validar lo que retorne la función
-// Que dataPokemon retorne un tipo string
-

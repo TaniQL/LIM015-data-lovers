@@ -40,6 +40,11 @@ export const filterBySort = (ordenSeleccionado, allData) => {
   }
 };
 
+export const computeStats = (rarity,allData) => {
+  let filterLegendarios = Array.from(allData);
+  filterLegendarios = filterLegendarios.filter( leg => leg['pokemon-rarity'].includes(rarity));
+  return filterLegendarios;
+}
 
 /* -------------- Cara trasera de la tarjeta--------------------*/
 
