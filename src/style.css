@@ -10,15 +10,16 @@ body{
 }
 
 .container-main, .container-mainPokedex, .container-footer {
-    float: left;
-    box-sizing: border-box;
+float: left;
+box-sizing: border-box;
 }
 
 /* Estilo del header */
 
 .container-header{
 display: flex;
-width: 100%;
+width: 100% auto;
+height: 100vw auto;
 position: relative;
 background-color: #F5DB13;
 box-shadow: 0px 4px 4px rgba(121, 83, 83, 0.25);
@@ -81,13 +82,10 @@ height:auto;
 }
 
 
-
-p{
+.textWelcome{
 display: flex;
 font-family: 'Revalia';
-font-size: 85px;
-margin: 20px;
-padding: 10px;
+font-size: 6em;
 text-align: center;
 color:#FFF;}
 
