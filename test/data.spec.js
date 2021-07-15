@@ -1,5 +1,9 @@
 import { dataPokemon, filterPokemon, filterType, filterBySort} from '../src/data.js';
 
+import datatest from './data/pokemon/pokemontest.js';
+
+const datatest = datatest;
+
 describe('dataPokemon', () => {
   it('is a function', () => {
     expect(typeof dataPokemon).toBe('function');
@@ -16,7 +20,7 @@ describe('filterPokemon', () => {
   });
 
   it('debería retornar String para dataPokemon.name', () => {
-    expect(typeof filterPokemon.num).toBe('string');
+    expect(typeof filterPokemon.name).toBe('string');
   });
 });
 
