@@ -15,9 +15,9 @@ describe('filterPokemon', () => {
     expect(typeof filterPokemon).toBe('function');
   });
 
-  // it.skip('returns `example`', () => {
-  // //  expect(dataPokemon()).toBe('dataPokemon');
-  // });
+  it('debería retornar String para dataPokemon.name', () => {
+    expect(typeof filterPokemon.num).toBe('string');
+  });
 });
 
 describe('filterType', () => {
