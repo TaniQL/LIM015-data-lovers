@@ -7,7 +7,7 @@ import data from './data/pokemon/pokemon.js';
 const btnPokedex = document.getElementById("btnPokedex");
 const btnHome = document.getElementById("btnHome");
 const btnInfo = document.getElementById("btnInfo");
-const containerHome = document.getElementById("containerHome");
+const containerMain = document.getElementById("container-main");
 const containerMainPokedex = document.getElementById("containerMainPokedex");
 const containerTop10 = document.getElementById("containerTop10");
 const filterOptions =document.getElementById("filterOptions");
@@ -31,13 +31,13 @@ cardPokemon.innerHTML = allData.map(dataPokemon).join(" ");
 btnHome.addEventListener("click",() => {
 containerMainPokedex.style.display="none";
 containerTop10.style.display="none";
-containerHome.style.display="block";
+containerMain.style.display="block";
 footer.style.display="none";
 });
 
 btnPokedex.addEventListener("click",() => {
 filterOptions.style.display="block";
-containerHome.style.display="none";
+containerMain.style.display="none";
 containerMainPokedex.style.display="block";
 containerTop10.style.display="none";
 footer.style.display="block";
@@ -47,7 +47,7 @@ showPokemon();
 btnInfo.addEventListener("click", () => {
 filterOptions.style.display="none";
 containerMainPokedex.style.display="none";
-containerHome.style.display="none";
+containerMain.style.display="none";
 containerTop10.style.display="block";
 footer.style.display="block";
 let rarity = "legendary";

@@ -19,26 +19,24 @@
         </div>
     </header>
 
-    <main class ="container-main" id="container-main">
+    <main class ="container-main" id="container-main" style="display:block">
       <section class="container-home" id="containerHome">
-          <img src="./data/imagen/pikachu.png" alt="pikachu img" width="520" height="560" id="imgPikachu" class="imgPikachu" >
+          <img src="./data/imagen/pikachu.png" alt="pikachu img"  id="imgPikachu" class="imgPikachu" >
           <div class="container-welcome">
-            <div class="welcome">
               <p class="textWelcome">Welcome to the community!</p>
-            </div>
           </div>
       </section>
     </main>
 
     <main class="container-mainPokedex" id="containerMainPokedex" style="display:none">
       <section class="filterPokemon" id="filterOptions" style="display:none">
-        <select id="seleccionarRegion">
-          <option disabled selected>Seleccionar Región</option>
+        <select class="filterPokedex" id="seleccionarRegion">
+          <option disabled selected>Region</option>
           <option value="johto">Johto</option>
           <option value="kanto">Kanto</option>
         </select>
-        <select id="seleccionarTipo" name="Tipo">
-          <option disabled selected>Seleccionar Tipo</option>
+        <select class="filterPokedex" id="seleccionarTipo" name="Tipo">
+          <option disabled selected>Type</option>
           <option value="grass">Grass</option>
           <option value="poison">Poison</option>
           <option value="water">Water</option>
@@ -55,13 +53,13 @@
           <option value="dragon">Dragon</option>
         </select>
 
-        <select id="seleccionarOrden">
-        <option disabled selected>Ordenar por</option>
+        <select class="filterPokedex" id="seleccionarOrden">
+        <option disabled selected>Sort</option>
         <option value="a-z">ordenar a-z</option>
         <option value="z-a">ordenar z-a</option>
         </select>
 
-        <input type="button" id="cleanFilter" value="Limpiar Filtros">
+        <input type="button" id="cleanFilter" class="btnCleanFilter" value="Clean Filter">
 
         <br>
 
