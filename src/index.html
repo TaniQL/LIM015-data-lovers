@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <title>.:Pokemon:.</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/ad40416f54.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header class="container-header">
@@ -19,7 +20,7 @@
         </div>
     </header>
 
-    <main class ="container-main" id="container-main" style="display:block">
+    <main class ="container-main" id="container-main">
       <section class="container-home" id="containerHome">
           <img src="./data/imagen/pikachu.png" alt="pikachu img"  id="imgPikachu" class="imgPikachu" >
           <div class="container-welcome">
@@ -29,7 +30,7 @@
     </main>
 
     <main class="container-mainPokedex" id="containerMainPokedex" style="display:none">
-      <section class="filterPokemon" id="filterOptions" style="display:none">
+      <section class="filterPokemon" id="filterOptions" >
         <select class="filterPokedex" id="seleccionarRegion">
           <option disabled selected>Region</option>
           <option value="johto">Johto</option>
@@ -59,8 +60,8 @@
         <option value="z-a">ordenar z-a</option>
         </select>
 
-        <input type="button" id="cleanFilter" class="btnCleanFilter" value="Clean Filter">
-
+        <!-- <input type="button" id="cleanFilter" class="btnCleanFilter" value="Clean Filter">  -->
+        <i class="far fa-trash-alt fa-2x" input type="button" id="cleanFilter"></i>
         <br>
 
       </section>
@@ -83,7 +84,7 @@
     </main>
 
     <footer class="container-footer" id="container-footer" style="display:none">
-      <h2> ©Creado por Tania y Mafer. LIM015</h2>
+      <p class="textFooter"> ©Creado por Tania y Mafer. LIM015</p>
     </footer>
 
     <div id="root"></div>
