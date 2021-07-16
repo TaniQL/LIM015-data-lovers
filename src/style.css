@@ -151,7 +151,7 @@ justify-content: center;
 
 .cardPokemon-front{
 display: flex;
-background: linear-gradient(180deg, #70A83B 0%, rgba(112, 168, 59, 0.838912) 16.11%, rgba(112, 168, 59, 0) 100%);
+/* background: linear-gradient(180deg, #70A83B 0%, rgba(112, 168, 59, 0.838912) 16.11%, rgba(112, 168, 59, 0) 100%); */
 border-radius: 25px;
 width: 370px;
 height: 460px;

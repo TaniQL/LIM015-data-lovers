@@ -2,8 +2,6 @@ import { dataPokemon, filterPokemon, filterType, filterBySort} from '../src/data
 
 import datatest from './data/pokemon/pokemontest.js';
 
-const datatest = datatest;
-
 describe('dataPokemon', () => {
   it('is a function', () => {
     expect(typeof dataPokemon).toBe('function');

@@ -13,6 +13,15 @@ export const dataPokemon = (elemento) => {
   </div>`
 };
 
+/*----------Colores del fondo de tarjeta según el tipo--------- */
+
+export const colorCard = (main_types, allData) => {
+  //let dataColorType = allData.filter(tipo=> tipo.type[0]== main_types[0]);
+const poke_types = allData.map(type => type.type[0]);
+const type = main_types.find(type => poke_types.indexOf(type) > -1);
+return type;
+};
+
 /* ---------------Function Filter Region --------------------*/
 
 export const filterPokemon = (regionSeleccionada, allData) => {
