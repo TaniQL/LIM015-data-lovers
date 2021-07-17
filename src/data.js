@@ -6,10 +6,12 @@
 export const dataPokemon = (elemento) => {
 
   return `<div class="cardPokemon-front" id="cardPokemonFront">
-  <h1 class="namePokemon">${elemento.name}</h1>
-  <h1 class="numPokemon">N°${elemento.num}</h1><br></br>
-  <img src="${elemento.img}" alt="" class="imgPokemon">
-  <h1 class="typePokemon">${elemento.type}</h1>
+    <div class="containerNameNum" >
+      <h1 class="namePokemon">${elemento.name}</h1>
+      <h1 class="numPokemon">N°${elemento.num}</h1>
+    </div>
+    <img src="${elemento.img}" alt="" class="imgPokemon">
+    <h1 class="typePokemon">${elemento.type}</h1>
   </div>`
 };
 

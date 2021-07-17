@@ -9,15 +9,23 @@
   </head>
   <body>
     <header class="container-header">
-        <img src="./data/imagen/logo.png" alt="logo de pokemon" width="180" class="header-img">
-      <div class="nav-bar">
-        <input type="button" id="btnHome" value="HOME" class="btnHeader">
-        <label for="btnHome"></label>
-        <input type="button" id="btnPokedex" value="POKEDEX" class="btnHeader">
-        <label for="btnPokedex"></label>
-        <input type="button" id="btnInfo" value="+INFO" class="btnHeader">
-        <label for="btnLegendary"></label>
-        </div>
+      <nav class="nav-bar">
+        <img src="./data/imagen/logo.png" alt="logo de pokemon" width="180" class="logo-img">
+       <button class="nav-toggle">
+        <i class="fas fa-bars"></i>
+       </button>
+        <ul class="nav-menu">
+          <il class="nav-menu-item" >
+            <a id="btnHome" class="nav-menu-content">home</a>
+          </il>
+          <il class="nav-menu-item">
+            <a id="btnPokedex" class="nav-menu-content" >pokedex</a>
+          </il>
+          <il class="nav-menu-item" >
+            <a id="btnInfo" class="nav-menu-content" >+info</a>
+          </il>
+          </ul>
+      </nav>
     </header>
 
     <main class ="container-main" id="container-main">
