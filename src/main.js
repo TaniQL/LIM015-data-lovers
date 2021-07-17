@@ -1,5 +1,5 @@
 
-import { dataPokemon, colorCard, filterPokemon, filterType, filterBySort, computeStats} from './data.js';
+import { dataPokemon, filterPokemon, filterType, filterBySort, computeStats} from './data.js';
 
 import data from './data/pokemon/pokemon.js';
 
@@ -20,30 +20,37 @@ const cleanFilter = document.getElementById("cleanFilter");
 let infoExtra = document.getElementById("infoExtra");
 const pokemontTop10 = document.getElementById("pokemontTop10");
 
+const navToggle = document.querySelector(".nav-toggle");
+const navMenu = document.querySelector(".nav-menu");
 
-const colorPokemon = () => {
-  const colors = {
-    fire: '#70A83B',
-    grass: '#DEFDE0',
-    electric: '#FCF7DE',
-    water: '#DEF3FD',
-    ground: '#f4e7da',
-    rock: '#d5d5d4',
-    fairy: '#fceaff',
-    poison: '#98d7a5',
-    bug: '#f8d5a3',
-    dragon: '#97b3e6',
-    psychic: '#eaeda1',
-    flying: '#F5F5F5',
-    fighting: '#E6E0D4',
-    normal: '#F5F5F5'
-  };
-  const main_types = Object.keys(colors);
-  let typeColor = colorCard(main_types,allData);
-  const color = colors[typeColor];
-  cardPokemon.style.backgroundColor = color;
-  console.log(color);
-};
+navToggle.addEventListener("click", () =>  {
+navMenu.classList.toggle("nav-menu_visible");
+});
+
+
+// const colorPokemon = () => {
+//   const colors = {
+//     fire: '#70A83B',
+//     grass: '#DEFDE0',
+//     electric: '#FCF7DE',
+//     water: '#DEF3FD',
+//     ground: '#f4e7da',
+//     rock: '#d5d5d4',
+//     fairy: '#fceaff',
+//     poison: '#98d7a5',
+//     bug: '#f8d5a3',
+//     dragon: '#97b3e6',
+//     psychic: '#eaeda1',
+//     flying: '#F5F5F5',
+//     fighting: '#E6E0D4',
+//     normal: '#F5F5F5'
+//   };
+//   const main_types = Object.keys(colors);
+//   let typeColor = colorCard(main_types,allData);
+//   const color = colors[typeColor];
+//   cardPokemon.style.backgroundColor = color;
+//   console.log(color);
+// };
 
 /*----------------- Mostrar la data de Pokemon.js------------------------*/
 const showPokemon  =() =>{
@@ -53,6 +60,7 @@ cardPokemon.innerHTML = allData.map(dataPokemon).join(" ");
 
 /*----------------- Botones del Header ------------------------*/
 btnHome.addEventListener("click",() => {
+navMenu.classList.toggle("nav-menu_visible");
 containerMainPokedex.style.display="none";
 containerTop10.style.display="none";
 containerMain.style.display="block";
@@ -60,12 +68,15 @@ footer.style.display="none";
 });
 
 btnPokedex.addEventListener("click",() => {
+// e.preventDefault;
 containerMain.style.display="none";
 containerMainPokedex.style.display="block";
 containerTop10.style.display="none";
 footer.style.display="block";
+navMenu.classList.toggle("nav-menu_visible");
+
 showPokemon();
-colorPokemon();
+// colorPokemon();
 });
 
 btnInfo.addEventListener("click", () => {
@@ -73,6 +84,8 @@ containerMainPokedex.style.display="none";
 containerMain.style.display="none";
 containerTop10.style.display="block";
 footer.style.display="block";
+navMenu.classList.toggle("nav-menu_visible");
+
 let rarity = "legendary";
 let top10 = computeStats(rarity,allData);
 let x = top10.length;
