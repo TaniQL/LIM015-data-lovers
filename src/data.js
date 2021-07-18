@@ -3,26 +3,33 @@
 
 /*Cara Delantera de la tarjeta*/
 
+
+
+
 export const dataPokemon = (elemento) => {
 
-  return `<div class="cardPokemon-front" id="cardPokemonFront">
-    <div class="containerNameNum" >
+  return `
+  <div class="cardPokemon-front" id="${elemento.num}">
+    <div class="containerNameNum">
       <h1 class="namePokemon">${elemento.name}</h1>
       <h1 class="numPokemon">N°${elemento.num}</h1>
     </div>
     <img src="${elemento.img}" alt="" class="imgPokemon">
     <h1 class="typePokemon">${elemento.type}</h1>
-  </div>`
+  </div>
+  `
 };
+
+
 
 /*----------Colores del fondo de tarjeta según el tipo--------- */
 
-export const colorCard = (main_types, allData) => {
-  //let dataColorType = allData.filter(tipo=> tipo.type[0]== main_types[0]);
-const poke_types = allData.map(type => type.type[0]);
-const type = main_types.find(type => poke_types.indexOf(type) > -1);
-return type;
-};
+// export const colorCard = (main_types, allData) => {
+//   //let dataColorType = allData.filter(tipo=> tipo.type[0]== main_types[0]);
+// const poke_types = allData.map(type => type.type[0]);
+// const type = main_types.find(type => poke_types.indexOf(type) > -1);
+// return type;
+// };
 
 /* ---------------Function Filter Region --------------------*/
 

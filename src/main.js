@@ -23,9 +23,17 @@ const pokemontTop10 = document.getElementById("pokemontTop10");
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".nav-menu");
 
+const modalContainer = document.getElementById("modal-container");
+const closeModal = document.getElementById("close-modal");
+
+
+
+/*----------------- Menu desplegable para celular------------------------*/
+
 navToggle.addEventListener("click", () =>  {
 navMenu.classList.toggle("nav-menu_visible");
 });
+
 
 
 // const colorPokemon = () => {
@@ -53,10 +61,13 @@ navMenu.classList.toggle("nav-menu_visible");
 // };
 
 /*----------------- Mostrar la data de Pokemon.js------------------------*/
-const showPokemon  =() =>{
+const showPokemon=() =>{
 cardPokemon.innerHTML = "";
 cardPokemon.innerHTML = allData.map(dataPokemon).join(" ");
+
 };
+
+
 
 /*----------------- Botones del Header ------------------------*/
 btnHome.addEventListener("click",() => {
@@ -68,7 +79,6 @@ footer.style.display="none";
 });
 
 btnPokedex.addEventListener("click",() => {
-// e.preventDefault;
 containerMain.style.display="none";
 containerMainPokedex.style.display="block";
 containerTop10.style.display="none";
@@ -77,6 +87,14 @@ navMenu.classList.toggle("nav-menu_visible");
 
 showPokemon();
 // colorPokemon();
+});
+
+cardPokemon.addEventListener("click", () => {
+  modalContainer.classList.add("show");
+});
+
+closeModal.addEventListener('click', () => {
+  modalContainer.classList.remove('show');
 });
 
 btnInfo.addEventListener("click", () => {
