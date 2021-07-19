@@ -26,7 +26,7 @@ const navMenu = document.querySelector(".nav-menu");
 const modalContainer = document.getElementById("modal-container");
 const closeModal = document.getElementById("close-modal");
 
-
+const modalPokemon = document.getElementById("modal-pokemon");
 
 /*----------------- Menu desplegable para celular------------------------*/
 
@@ -79,23 +79,66 @@ footer.style.display="none";
 });
 
 btnPokedex.addEventListener("click",() => {
-containerMain.style.display="none";
-containerMainPokedex.style.display="block";
-containerTop10.style.display="none";
-footer.style.display="block";
-navMenu.classList.toggle("nav-menu_visible");
+  containerMain.style.display="none";
+  containerMainPokedex.style.display="block";
+  containerTop10.style.display="none";
+  footer.style.display="block";
+  navMenu.classList.toggle("nav-menu_visible");
 
-showPokemon();
-// colorPokemon();
+  showPokemon();
+  // colorPokemon();
+  const eachCard = document.querySelectorAll(".cardPokemon-front");
+  eachCard.forEach(element => element.addEventListener("click",() => {
+    modalContainer.classList.add("show")
+    console.log("abrir modal", element.id);
+
+    const encontrarPokemon = allData.find(elemento => elemento.num === element.id)
+    console.log(encontrarPokemon);
+
+    modalPokemon.innerHTML = `
+    <div class= "modal-pokemon>
+      <div class="containerNameNum">
+        <h1 class="namePokemon">${encontrarPokemon.name}</h1>
+        <h1 class="numPokemon">N°${encontrarPokemon.num}</h1>
+        <img src="${encontrarPokemon.img}" alt="" class="imgPokemon">
+        <p class="aboutPokemon">${encontrarPokemon.about}</p>
+
+      </div>
+    </div>
+    ` ;
+
+  }))
+
+  closeModal.addEventListener('click', () => {
+    modalContainer.classList.remove('show');
+  });
+
+
+
+    // element.cardPokemon.addEventListener("click", () => {
+    //   modalContainer.classList.add("show");
+    //   console.log("carta");
+    // })
+
 });
 
-cardPokemon.addEventListener("click", () => {
-  modalContainer.classList.add("show");
-});
+//usar funcion forEach (para el AddEventlistener clic) y luego filter para que el numero pokemon sea igual al id de la carta 
 
-closeModal.addEventListener('click', () => {
-  modalContainer.classList.remove('show');
-});
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const eachCard = document.querySelectorAll(".cardPokemon-front");
+//   console.log(eachCard);
+  
+// });
+
+// cardPokemon.addEventListener("click", () => {
+//   modalContainer.classList.add("show");
+// });
+
+// closeModal.addEventListener('click', () => {
+//   modalContainer.classList.remove('show');
+// });
+
 
 btnInfo.addEventListener("click", () => {
 containerMainPokedex.style.display="none";
