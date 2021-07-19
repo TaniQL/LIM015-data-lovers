@@ -273,6 +273,40 @@ justify-content: center;
 height: auto;
 }
 
+.modal-container{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    position:fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.3s ease;
+}
+
+.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+.modal-pokemon{
+    background-color: #fff;
+    width: 800px;
+    max-width: 100%;
+    height:500px;
+    max-height: 100%;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: right;
+}
+
+
+
 /* Estilo del footer */
 .container-footer {
 display:flex;
