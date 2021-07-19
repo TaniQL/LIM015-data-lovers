@@ -3,7 +3,7 @@ import { dataPokemon, filterPokemon, filterType, filterBySort, computeStats} fro
 
 import data from './data/pokemon/pokemon.js';
 
-/*----------------- Mostrar y ocultar secciones del HTML------------------------*/
+/*----------------- Definición de variables------------------------*/
 const btnPokedex = document.getElementById("btnPokedex");
 const btnHome = document.getElementById("btnHome");
 const btnInfo = document.getElementById("btnInfo");
@@ -19,13 +19,10 @@ const seleccionarOrden = document.getElementById("seleccionarOrden");
 const cleanFilter = document.getElementById("cleanFilter");
 let infoExtra = document.getElementById("infoExtra");
 const pokemontTop10 = document.getElementById("pokemontTop10");
-
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".nav-menu");
-
 const modalContainer = document.getElementById("modal-container");
 const closeModal = document.getElementById("close-modal");
-
 const modalPokemon = document.getElementById("modal-pokemon");
 
 /*----------------- Menu desplegable para celular------------------------*/
@@ -33,8 +30,6 @@ const modalPokemon = document.getElementById("modal-pokemon");
 navToggle.addEventListener("click", () =>  {
 navMenu.classList.toggle("nav-menu_visible");
 });
-
-
 
 // const colorPokemon = () => {
 //   const colors = {
@@ -64,8 +59,57 @@ navMenu.classList.toggle("nav-menu_visible");
 const showPokemon=() =>{
 cardPokemon.innerHTML = "";
 cardPokemon.innerHTML = allData.map(dataPokemon).join(" ");
-
 };
+
+/*----------------- Mostrar el Modal ------------------------*/
+const showModal=() =>{
+  const eachCard = document.querySelectorAll(".cardPokemon-front");
+  eachCard.forEach(element => element.addEventListener("click",() => {
+    modalContainer.classList.add("show")
+
+    const encontrarPokemon = allData.find(elemento => elemento.num === element.id)
+    modalPokemon.innerHTML = `
+    <div class= "modal-pokemon>
+      <div class="containerNameNum">
+        <h1 class="namePokemon">${encontrarPokemon.name}</h1>
+        <h1 class="numPokemon">N°${encontrarPokemon.num}</h1>
+        <img src="${encontrarPokemon.img}" alt="" class="imgPokemon">
+        <p class="aboutPokemon">${encontrarPokemon.about}</p>
+      </div>
+    </div>`;
+
+  }));
+
+  closeModal.addEventListener('click', () => {
+    modalContainer.classList.remove('show');
+  });
+  };
+
+/*----------------- Mostrar el Modal Info ------------------------*/
+const showModalInfo=() =>{
+  const eachCard = document.querySelectorAll(".cardPokemonInfo");
+  eachCard.forEach(element => element.addEventListener("click",() => {
+    modalContainer.classList.add("show")
+
+    const encontrarPokemon = allData.find(elemento => elemento.num === element.id)
+    modalPokemon.innerHTML = `
+    <div class= "modal-pokemon>
+      <div class="containerNameNum">
+        <h1 class="namePokemon">${encontrarPokemon.name}</h1>
+        <h1 class="numPokemon">N°${encontrarPokemon.num}</h1>
+        <img src="${encontrarPokemon.img}" alt="" class="imgPokemon">
+        <p class="aboutPokemon">${encontrarPokemon.about}</p>
+      </div>
+    </div>`;
+
+  }));
+
+  closeModal.addEventListener('click', () => {
+    modalContainer.classList.remove('show');
+  });
+  };
+
+
 
 
 
@@ -86,75 +130,27 @@ btnPokedex.addEventListener("click",() => {
   navMenu.classList.toggle("nav-menu_visible");
 
   showPokemon();
+  showModal();
   // colorPokemon();
-  const eachCard = document.querySelectorAll(".cardPokemon-front");
-  eachCard.forEach(element => element.addEventListener("click",() => {
-    modalContainer.classList.add("show")
-    console.log("abrir modal", element.id);
-
-    const encontrarPokemon = allData.find(elemento => elemento.num === element.id)
-    console.log(encontrarPokemon);
-
-    modalPokemon.innerHTML = `
-    <div class= "modal-pokemon>
-      <div class="containerNameNum">
-        <h1 class="namePokemon">${encontrarPokemon.name}</h1>
-        <h1 class="numPokemon">N°${encontrarPokemon.num}</h1>
-        <img src="${encontrarPokemon.img}" alt="" class="imgPokemon">
-        <p class="aboutPokemon">${encontrarPokemon.about}</p>
-
-      </div>
-    </div>
-    ` ;
-
-  }))
-
-  closeModal.addEventListener('click', () => {
-    modalContainer.classList.remove('show');
-  });
-
-
-
-    // element.cardPokemon.addEventListener("click", () => {
-    //   modalContainer.classList.add("show");
-    //   console.log("carta");
-    // })
-
 });
 
-//usar funcion forEach (para el AddEventlistener clic) y luego filter para que el numero pokemon sea igual al id de la carta 
-
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   const eachCard = document.querySelectorAll(".cardPokemon-front");
-//   console.log(eachCard);
-  
-// });
-
-// cardPokemon.addEventListener("click", () => {
-//   modalContainer.classList.add("show");
-// });
-
-// closeModal.addEventListener('click', () => {
-//   modalContainer.classList.remove('show');
-// });
-
-
+/*----------------- Mostrar la función Calculate ------------------------*/
 btnInfo.addEventListener("click", () => {
-containerMainPokedex.style.display="none";
-containerMain.style.display="none";
-containerTop10.style.display="block";
-footer.style.display="block";
-navMenu.classList.toggle("nav-menu_visible");
+  containerMainPokedex.style.display="none";
+  containerMain.style.display="none";
+  containerTop10.style.display="block";
+  footer.style.display="block";
+  navMenu.classList.toggle("nav-menu_visible");
 
-let rarity = "legendary";
-let top10 = computeStats(rarity,allData);
-let x = top10.length;
-let y = parseInt(((x/251)*100));
-infoExtra.innerHTML=" ";
-infoExtra.innerHTML = "Sabias que solo el " + y + "%" + " de los pokemones son legendarios";
-pokemontTop10.innerHTML = " ";
-pokemontTop10.innerHTML = top10.map(dataPokemon).join(" ");
+  let rarity = "legendary";
+  let top10 = computeStats(rarity,allData);
+  let x = top10.length;
+  let y = parseInt(((x/251)*100));
+  infoExtra.innerHTML=" ";
+  infoExtra.innerHTML = "¿Sabías que solo el " + y + "%" + " de los pokemones son legendarios?";
+  pokemontTop10.innerHTML = " ";
+  pokemontTop10.innerHTML = top10.map(dataPokemon).join(" ");
+  showModalInfo();
 });
 
 
@@ -166,6 +162,7 @@ cardPokemon.innerHTML = " ";
 cardPokemon.innerHTML = dataFilter.map(dataPokemon).join(" ");
 seleccionarOrden.selectedIndex = 0;
 seleccionarTipo.selectedIndex = 0;
+showModal();
 });
 
 seleccionarTipo.addEventListener("click", () => {
@@ -175,6 +172,7 @@ cardPokemon.innerHTML = " ";
 cardPokemon.innerHTML = dataFilter.map(dataPokemon).join(" ");
 seleccionarRegion.selectedIndex = 0;
 seleccionarOrden.selectedIndex = 0;
+showModal();
 });
 
 
@@ -186,6 +184,7 @@ cardPokemon.innerHTML = " ";
 cardPokemon.innerHTML = dataSort.map(dataPokemon).join(" ");
 seleccionarTipo.selectedIndex = 0;
 seleccionarRegion.selectedIndex = 0;
+showModal();
 });
 
 /*----------------- Function Limpiar Filtros----------------*/

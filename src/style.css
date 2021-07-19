@@ -195,7 +195,8 @@ color: rgb(173, 73, 73);
 }
 
 /* Estilo de la tarjeta Pokemon */
-.cardFrontPokemon {
+.cardFrontPokemon,
+.cardPokemonInfo {
 display: flex;
 flex-flow: row wrap;
 justify-content: center;
