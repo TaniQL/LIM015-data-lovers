@@ -78,14 +78,14 @@ const showModal=() =>{
 
     const encontrarPokemon = allData.find(elemento => elemento.num === element.id)
     modalPokemon.innerHTML = `
-    <div class= "modal-pokemon>
-      <div class="containerNameNum">
-        <h1 class="namePokemon">${encontrarPokemon.name}</h1>
-        <h1 class="numPokemon">N°${encontrarPokemon.num}</h1>
-        <img src="${encontrarPokemon.img}" alt="" class="imgPokemon">
-        <p class="aboutPokemon">${encontrarPokemon.about}</p>
-      </div>
-    </div>`;
+    <div class= "modal-pokemon">
+        <h1 class="name-pokemon">${encontrarPokemon.name}</h1>
+        <img src="${encontrarPokemon.img}" alt="" class="img-pokemon">
+        <p class="about-pokemon">${encontrarPokemon.about}</p>
+    </div>
+    
+
+    `;
 
   }));
 
