@@ -4,23 +4,32 @@ import { dataPokemon, filterPokemon, filterType, filterBySort, computeStats} fro
 import data from './data/pokemon/pokemon.js';
 
 /*----------------- Definición de variables------------------------*/
+const allData = data.pokemon;
+let cardPokemon = document.getElementById("cardFrontPokemon");
+
 const btnPokedex = document.getElementById("btnPokedex");
 const btnHome = document.getElementById("btnHome");
 const btnInfo = document.getElementById("btnInfo");
+
 const containerMain = document.getElementById("container-main");
 const containerMainPokedex = document.getElementById("containerMainPokedex");
 const containerTop10 = document.getElementById("containerTop10");
+let containerFilter = document.getElementById("filterOptions");
+
+
 const footer = document.getElementById("container-footer");
-const allData = data.pokemon;
+
 const seleccionarRegion= document.getElementById("seleccionarRegion");
-let cardPokemon = document.getElementById("cardFrontPokemon");
 const seleccionarTipo = document.getElementById("seleccionarTipo");
 const seleccionarOrden = document.getElementById("seleccionarOrden");
 const cleanFilter = document.getElementById("cleanFilter");
+
 let infoExtra = document.getElementById("infoExtra");
-const pokemontTop10 = document.getElementById("pokemontTop10");
+// const pokemontTop10 = document.getElementById("pokemontTop10");
+
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".nav-menu");
+
 const modalContainer = document.getElementById("modal-container");
 const closeModal = document.getElementById("close-modal");
 const modalPokemon = document.getElementById("modal-pokemon");
@@ -86,28 +95,28 @@ const showModal=() =>{
   };
 
 /*----------------- Mostrar el Modal Info ------------------------*/
-const showModalInfo=() =>{
-  const eachCard = document.querySelectorAll(".cardPokemonInfo");
-  eachCard.forEach(element => element.addEventListener("click",() => {
-    modalContainer.classList.add("show")
+// const showModalInfo=() =>{
+//   const eachCard = document.querySelectorAll(".cardPokemonInfo");
+//   eachCard.forEach(element => element.addEventListener("click",() => {
+//     modalContainer.classList.add("show")
 
-    const encontrarPokemon = allData.find(elemento => elemento.num === element.id)
-    modalPokemon.innerHTML = `
-    <div class= "modal-pokemon>
-      <div class="containerNameNum">
-        <h1 class="namePokemon">${encontrarPokemon.name}</h1>
-        <h1 class="numPokemon">N°${encontrarPokemon.num}</h1>
-        <img src="${encontrarPokemon.img}" alt="" class="imgPokemon">
-        <p class="aboutPokemon">${encontrarPokemon.about}</p>
-      </div>
-    </div>`;
+//     const encontrarPokemon = allData.find(elemento => elemento.num === element.id)
+//     modalPokemon.innerHTML = `
+//     <div class= "modal-pokemon>
+//       <div class="containerNameNum">
+//         <h1 class="namePokemon">${encontrarPokemon.name}</h1>
+//         <h1 class="numPokemon">N°${encontrarPokemon.num}</h1>
+//         <img src="${encontrarPokemon.img}" alt="" class="imgPokemon">
+//         <p class="aboutPokemon">${encontrarPokemon.about}</p>
+//       </div>
+//     </div>`;
 
-  }));
+//   }));
 
-  closeModal.addEventListener('click', () => {
-    modalContainer.classList.remove('show');
-  });
-  };
+  // closeModal.addEventListener('click', () => {
+  //   modalContainer.classList.remove('show');
+  // });
+  // };
 
 
 
@@ -126,6 +135,8 @@ btnPokedex.addEventListener("click",() => {
   containerMain.style.display="none";
   containerMainPokedex.style.display="block";
   containerTop10.style.display="none";
+  containerFilter.classList.add("show");
+  // containerFilter.classList.add("show");
   footer.style.display="block";
   navMenu.classList.toggle("nav-menu_visible");
 
@@ -136,9 +147,12 @@ btnPokedex.addEventListener("click",() => {
 
 /*----------------- Mostrar la función Calculate ------------------------*/
 btnInfo.addEventListener("click", () => {
-  containerMainPokedex.style.display="none";
+
+  containerMainPokedex.style.display="block";
   containerMain.style.display="none";
+  containerFilter.classList.remove("show");
   containerTop10.style.display="block";
+  // containerFilter.classList.remove("show");
   footer.style.display="block";
   navMenu.classList.toggle("nav-menu_visible");
 
@@ -146,11 +160,13 @@ btnInfo.addEventListener("click", () => {
   let top10 = computeStats(rarity,allData);
   let x = top10.length;
   let y = parseInt(((x/251)*100));
+
   infoExtra.innerHTML=" ";
   infoExtra.innerHTML = "¿Sabías que solo el " + y + "%" + " de los pokemones son legendarios?";
-  pokemontTop10.innerHTML = " ";
-  pokemontTop10.innerHTML = top10.map(dataPokemon).join(" ");
-  showModalInfo();
+
+  cardPokemon.innerHTML = " ";
+  cardPokemon.innerHTML = top10.map(dataPokemon).join(" ");
+  showModal();
 });
 
 
