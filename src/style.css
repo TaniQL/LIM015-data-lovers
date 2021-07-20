@@ -4,7 +4,6 @@
 *{
 margin:0;
 box-sizing: border-box;
-
 }
 
 .container-header, .container-main, .container-mainPokedex, .container-footer{
@@ -65,39 +64,7 @@ cursor: pointer;
 display:none;
 }
 
-/* Estilo del header
-.container-header{
-display: flex;
-position: relative;
-background-color: #F5DB13;
-box-shadow: 0px 4px 4px rgba(121, 83, 83, 0.25);
-justify-content: space-between;
-height:60px;
-
-}
-
-.nav-bar{
-display: flex;
-justify-content: space-around;
-}
-
-/* Estilo de los botones del header */
-
-/* .btnHeader{
-border: transparent;
-background-color:#F5DB13;
-font-family: 'Revalia';
-font-size: 29px;
-margin:10px;
-}
-
-.btnHeader:hover {
-cursor: pointer;
-transform: scale(1.1);
-color: #ffffff;
-} */
-
-/* Estilos de la sección home */
+/*---------------- Estilos de la sección home-------------- */
 .container-main{
 display: flex;
 background-color: #fff;
@@ -132,7 +99,6 @@ height: auto;
 }
 
 .textWelcome{
-/* background:#F28F16; */
 font-family: 'Revalia';
 font-size: 6.5vw;
 color:#FFF;
@@ -140,19 +106,20 @@ padding: 5px;
 text-align:center;
 }
 
-/* Estilo de la sección Pokedex */
+/* ----------------Estilo de la sección Pokedex--------------- */
 .container-mainPokedex{
 display: flex;
 justify-content: center;
 background-color: #fff;
 }
 
-/* Estilo de los filtros */
+/*----------------- Estilo de los filtros------------------ */
 .filterPokemon{
 display:flex;
 align-items: center;
 justify-content: center;
 opacity: 0;
+pointer-events: none;
 }
 
 .filterPokedex{
@@ -192,7 +159,7 @@ transform: scale(1.050);
 color: rgb(173, 73, 73);
 }
 
-/* Estilo de la tarjeta Pokemon */
+/*----------------- Estilo de la tarjeta Pokemon----------------- */
 .cardFrontPokemon,
 .cardPokemonInfo {
 display: flex;
@@ -298,7 +265,6 @@ padding: 10px;
     height: 400px;
 }
 
-
 .about-pokemon{
 max-width:300px;
 width:100%;
@@ -319,7 +285,7 @@ background-color:transparent;
 }
 
 
-/* Estilo del footer */
+/* ----------------------Estilo del footer ------------------------*/
 .container-footer {
 display:flex;
 background: #F2B807;
@@ -332,7 +298,7 @@ color: rgb(0, 0, 0);
 font-family: 'Revalia';
 font-size: 20px;
 }
-
+/* ----------------------CSS del media para celular ------------------------*/
 @media screen and (max-width:768px) {
 
 .container-header, .container-main, .container-mainPokedex, .container-footer{
@@ -356,12 +322,9 @@ position:fixed;
 top:90px;
 width:100%;
 padding:20px 0;
-
 height: calc(100% - 90px);
 overflow-y:auto;
-
 left: 100%;
-
 z-index:0;
 }
 .nav-toggle{
@@ -403,18 +366,17 @@ outline: none;
 }
 
 .filterPokedex{
-    width: 112px;
-    font-size:13px;
+width: 112px;
+font-size:13px;
 }
 
 .fa-2x {
-    font-size: 1.5em;
+font-size: 1.5em;
 }
 
 .messageCalcular{
-    top:80px;
-    font-size:20px;
-    
+top:80px;
+font-size:20px;
 }
 .about-pokemon{
 font-size: 20px;
@@ -429,7 +391,6 @@ height: 300px;
 .name-pokemon{
 font-size: 40px;
 width: auto;
-
 }
 
 }

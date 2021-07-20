@@ -8,9 +8,12 @@
     <script src="https://kit.fontawesome.com/ad40416f54.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <!------------------------------------Diseño del header---------------------------------->
     <header class="container-header">
+       <!----------------------Barra de Navegación ---------------------->
       <nav class="nav-bar">
         <img src="./data/imagen/logo.png" alt="logo de pokemon" width="180" class="logo-img">
+        <!--------------Modelo en responsive --------------->
        <button class="nav-toggle">
         <i class="fas fa-bars"></i>
        </button>
@@ -27,7 +30,7 @@
           </ul>
       </nav>
     </header>
-
+  <!---------------------------------Diseño del Main--------------------------------->
     <main class ="container-main" id="container-main">
       <section class="container-home" id="containerHome">
           <img src="./data/imagen/pikachu.png" alt="pikachu img"  id="imgPikachu" class="imgPikachu" >
@@ -36,7 +39,7 @@
           </div>
       </section>
     </main>
-
+<!--------------------------------Diseño del container pokedex con filtros--------------------------------->
     <main class="container-mainPokedex" id="containerMainPokedex">
       <section class="filterPokemon" id="filterOptions" >
         <select class="filterPokedex" id="seleccionarRegion">
@@ -65,16 +68,15 @@
 
         <select class="filterPokedex" id="seleccionarOrden">
         <option disabled selected>Sort</option>
-        <option value="a-z">ordenar a-z</option>
-        <option value="z-a">ordenar z-a</option>
+        <option value="a-z">Sort A-Z</option>
+        <option value="z-a">Sort Z-A</option>
         </select>
 
-        <!-- <input type="button" id="cleanFilter" class="btnCleanFilter" value="Clean Filter">  -->
         <i class="far fa-trash-alt fa-2x" input type="button" id="cleanFilter"></i>
         <br>
 
       </section>
-
+<!---------------------------------Diseño del Modal--------------------------------->
       <section class="modal-container" id="modal-container">
         <button class="close-modal" id="close-modal">X</button>
         <div class="modal-pokemon" id="modal-pokemon">
@@ -82,27 +84,22 @@
 
         
       </section>
-
+<!---------------------------------Diseño del Card Pokemon-------------------------------->
       <section class="cardsPokemon" id="cardsPokemon">
         <div class="cardFrontPokemon" id="cardFrontPokemon" >
-        </div>
-
-        <div class="cardBackPokemon" id="cardBackPokemon">
         </div>
       </section>
      
     </main>
-
-    <main id= "containerTop10" style="display:none">
+<!---------------------------------Diseño del container Info Extra--------------------------------->
+    <main id= "containerMoreInfo" style="display:none">
       <section class="messageCalcular" id="infoExtra" >
       </section>
     </main>
-
+<!---------------------------------Diseño del Footer--------------------------------->
     <footer class="container-footer" id="container-footer" style="display:none">
-      <p class="textFooter"> ©Creado por Tania y Mafer. LIM015</p>
+      <p class="textFooter"> ©Created by Tania and Mafer - LIM015</p>
     </footer>
-
-    <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
 </html>

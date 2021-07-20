@@ -1,13 +1,6 @@
 /* eslint-disable no-prototype-builtins */
-// estas funciones son de ejemplo
-
 /*Cara Delantera de la tarjeta*/
-
-
-
-
 export const dataPokemon = (elemento) => {
-
   return `
   <div class="cardPokemon-front" id="${elemento.num}">
     <div class="containerNameNum">
@@ -20,8 +13,6 @@ export const dataPokemon = (elemento) => {
   `
 };
 
-
-
 /*----------Colores del fondo de tarjeta según el tipo--------- */
 
 // export const colorCard = (main_types, allData) => {
@@ -33,7 +24,7 @@ export const dataPokemon = (elemento) => {
 
 /* ---------------Function Filter Region --------------------*/
 
-export const filterPokemon = (regionSeleccionada, allData) => {
+export const filterRegion = (regionSeleccionada, allData) => {
 let dataFilterRegion = allData.filter(reg=>reg.generation.name == regionSeleccionada)
 return dataFilterRegion;
 };
