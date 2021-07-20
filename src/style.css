@@ -154,7 +154,9 @@ background-color: #fff;
 display:flex;
 align-items: center;
 justify-content: center;
+opacity: 0;
 }
+
 
 .filterPokedex{
 border:transparent;
@@ -272,13 +274,15 @@ font-size: 28px;
 text-align:center;
 justify-content: center;
 height: auto;
+position: absolute;
+top: 100px;
+padding: 10px;
 }
 
 .modal-container{
     display: flex;
     justify-content:center;
     align-items:center;
-    position: fixed;
     pointer-events: none;
     opacity: 0;
     top: 0;
@@ -288,12 +292,16 @@ height: auto;
     height: 100vh;
     width: 100vw;
     transition: opacity 0.3s ease;
+    z-index:20;
 }
 
 .show {
     pointer-events: auto;
     opacity: 1;
 }
+
+
+
 .modal-pokemon{
     background-color: #fff;
     width: 800px;
@@ -304,6 +312,8 @@ height: auto;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     text-align: right;
+    z-index: 10000;
+
 }
 
 
