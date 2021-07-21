@@ -1,5 +1,5 @@
 
-import { dataPokemon, filterRegion, filterType, filterBySort, computeStats} from './data.js';
+import {filterRegion, filterType, filterBySort, computeStats} from './data.js';
 
 import data from './data/pokemon/pokemon.js';
 
@@ -13,7 +13,7 @@ const containerMain = document.getElementById("container-main");
 const containerMainPokedex = document.getElementById("containerMainPokedex");
 const containerMoreInfo = document.getElementById("containerMoreInfo");
 let containerFilter = document.getElementById("filterOptions");
-const footer = document.getElementById("container-footer");
+
 const seleccionarRegion= document.getElementById("seleccionarRegion");
 const seleccionarTipo = document.getElementById("seleccionarTipo");
 const seleccionarOrden = document.getElementById("seleccionarOrden");
@@ -55,6 +55,21 @@ navMenu.classList.toggle("nav-menu_visible");
 //   console.log(color);
 // };
 
+const dataPokemon = (elemento) => {
+  return `
+  <div class="cardPokemon-front" id="${elemento.num}">
+    <div class="containerNameNum">
+      <h1 class="namePokemon">${elemento.name}</h1>
+      <h1 class="numPokemon">N°${elemento.num}</h1>
+    </div>
+    <img src="${elemento.img}" alt="" class="imgPokemon">
+    <h1 class="typePokemon">${elemento.type}</h1>
+  </div>
+  `
+};
+
+
+
 /*----------------- Mostrar la data de Pokemon.js------------------------*/
 const showPokemon=() =>{
 cardPokemon.innerHTML = "";
@@ -63,16 +78,16 @@ cardPokemon.innerHTML = allData.map(dataPokemon).join(" ");
 
 /*----------------- Mostrar el Modal ------------------------*/
 const showModal=() =>{
-  const eachCard = document.querySelectorAll(".cardPokemon-front");
+const eachCard = document.querySelectorAll(".cardPokemon-front");
   eachCard.forEach(card => card.addEventListener("click",() => {
-    modalContainer.classList.add("show");
+  modalContainer.classList.add("show");
 
-    const encontrarPokemon = allData.find(modal => modal.num === card.id);
+  const findPokemon = allData.find(modal => modal.num === card.id);
     modalPokemon.innerHTML = `
     <div class= "modal-pokemon">
-        <h1 class="name-pokemon">${encontrarPokemon.name}</h1>
-        <img src="${encontrarPokemon.img}" alt="" class="img-pokemon">
-        <p class="about-pokemon">${encontrarPokemon.about}</p>
+        <h1 class="name-pokemon">${findPokemon.name}</h1>
+        <img src="${findPokemon.img}" alt="" class="img-pokemon">
+        <p class="about-pokemon">${findPokemon.about}</p>
     </div>
     `;
   }));
@@ -88,45 +103,42 @@ navMenu.classList.toggle("nav-menu_visible");
 containerMainPokedex.style.display="none";
 containerMoreInfo.style.display="none";
 containerMain.style.display="block";
-footer.style.display="block";
 });
 
 btnPokedex.addEventListener("click",() => {
-  containerMain.style.display="none";
-  containerMainPokedex.style.display="block";
-  containerMoreInfo.style.display="none";
-  containerFilter.classList.add("show");
+containerMain.style.display="none";
+containerMainPokedex.style.display="block";
+containerMoreInfo.style.display="none";
+containerFilter.classList.add("show");
   // containerFilter.classList.add("show");
-  footer.style.display="block";
-  navMenu.classList.toggle("nav-menu_visible");
 
-  showPokemon();
-  showModal();
+navMenu.classList.toggle("nav-menu_visible");
+
+showPokemon();
+showModal();
   // colorPokemon();
 });
 
 /*----------------- Mostrar la función Calculate ------------------------*/
 btnInfo.addEventListener("click", () => {
+containerMainPokedex.style.display="block";
+containerMain.style.display="none";
+containerFilter.classList.remove("show");
+containerMoreInfo.style.display="block";
+// containerFilter.classList.remove("show");
 
-  containerMainPokedex.style.display="block";
-  containerMain.style.display="none";
-  containerFilter.classList.remove("show");
-  containerMoreInfo.style.display="block";
-  // containerFilter.classList.remove("show");
-  footer.style.display="block";
-  navMenu.classList.toggle("nav-menu_visible");
+navMenu.classList.toggle("nav-menu_visible");
 
-  let rarity = "legendary";
-  let info = computeStats(rarity,allData);
-  let x = info.length;
-  let y = parseInt(((x/251)*100));
+let rarityPokemon = "legendary";
+let infoPokemon = computeStats(rarityPokemon,allData);
+let allPokemon = infoPokemon.length;
+let percentageInfo = parseInt(((allPokemon/251)*100));
 
-  infoExtra.innerHTML=" ";
-  infoExtra.innerHTML = "¿Sabías que solo el " + y + "%" + " de los pokemones son legendarios?";
+infoExtra.innerHTML = "Did you know that only " + percentageInfo + "% " + "of Pokemon are " + rarityPokemon;
 
-  cardPokemon.innerHTML = " ";
-  cardPokemon.innerHTML = info.map(dataPokemon).join(" ");
-  showModal();
+cardPokemon.innerHTML = " ";
+cardPokemon.innerHTML = infoPokemon.map(dataPokemon).join(" ");
+showModal();
 });
 
 
@@ -171,6 +183,10 @@ seleccionarOrden.selectedIndex = 0;
 seleccionarTipo.selectedIndex = 0;
 seleccionarRegion.selectedIndex = 0;
 });
+
+
+
+
 
 
 //const mostrarFrente = () => {
