@@ -17,12 +17,12 @@ Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-dat
 
 ## 2. Prototipado en papel
 
-![alt text](.src/data/imagen/1.png)
+![alt text](src/data/imagen/1.png)
 
-![alt text](.src/data/imagen/2.png)
+![alt text](src/data/imagen/2.png)
 
 
-![alt text](.src/data/imagen/3.png)
+![alt text](src/data/imagen/3.png)
 
 
 
