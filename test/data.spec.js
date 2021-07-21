@@ -1,4 +1,4 @@
-import { dataPokemon, filterRegion, filterType, filterBySort, computeStats} from '../src/data.js';
+import {filterRegion, filterType, filterBySort, computeStats} from '../src/data.js';
 
 const datatest =
 [
@@ -17,12 +17,12 @@ const datatestLeg =
 
 ]
 
-describe('dataPokemon', () => {
-  it('is a function', () => {
-    expect(typeof dataPokemon).toBe('function');
-  });
+// describe('dataPokemon', () => {
+//   it('is a function', () => {
+//     expect(typeof dataPokemon).toBe('function');
+//   });
 
-});
+// });
 
 
 describe('filterRegion', () => {
