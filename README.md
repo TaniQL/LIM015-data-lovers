@@ -15,14 +15,14 @@
 
 Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
 
-## 2. Prototipado en papel
+## 2. Prototipado en papelq
 
-![alt text](.src/data/imagen/1.png)
+![alt text](src/data/imagen/1.jpeg)
 
-![alt text](.src/data/imagen/2.png)
+![alt text](src/data/imagen/2.jpeg)
 
 
-![alt text](.src/data/imagen/3.png)
+![alt text](src/data/imagen/3.jpeg)
 
 
 
