@@ -17,20 +17,13 @@ const datatestLeg =
 
 ]
 
-// describe('dataPokemon', () => {
-//   it('is a function', () => {
-//     expect(typeof dataPokemon).toBe('function');
-//   });
-
-// });
-
 
 describe('filterRegion', () => {
   it('is a function', () => {
     expect(typeof filterRegion).toBe('function');
   });
 
-  it ('deberia retornar Johto para filterRegion', () => {
+  it ('Deberia retornar Johto para filterRegion', () => {
     const result = filterRegion('johto',datatest);
     expect (result[0].name).toEqual('celebi');
   })
@@ -42,7 +35,7 @@ describe('filterType', () => {
     expect(typeof filterType).toBe('function');
   });
 
-  it ('deberia retornar Celebi para filterType', () => {
+  it ('Deberia retornar Celebi para filterType', () => {
     const result = filterType('psychic',datatest);
     expect (result[0].name).toEqual('celebi');
   })
@@ -53,11 +46,11 @@ describe('filterBySort', () => {
     expect(typeof filterBySort).toBe('function');
   });
 
-  it ('deberia retornar Squirtle como primer nombre cuando ordena de Z-A', () => {
+  it ('Deberia retornar Squirtle como primer nombre cuando ordena de Z-A', () => {
     const result = filterBySort('z-a',datatest);
     expect (result[0].name).toEqual('squirtle');
   })
-  it ('deberia retornar Bulbasaur como primer nombre cuando ordena de A-Z', () => {
+  it ('Deberia retornar Bulbasaur como primer nombre cuando ordena de A-Z', () => {
     const result = filterBySort('a-z',datatest);
     expect (result[0].name).toEqual('bulbasaur');
   })
@@ -69,7 +62,7 @@ describe('computeStats', () => {
     expect(typeof computeStats).toBe('function');
   });
 
-  it (' no deberia retornar bulbasaur para ComputeStats', () => {
+  it ('No deberia retornar bulbasaur para el ComputeStats de Pokemones Legendarios', () => {
     const result = computeStats('legendary',datatestLeg);
     expect (result[0].name).not.toEqual('bulbasaur');
   })
