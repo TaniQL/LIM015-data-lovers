@@ -13,8 +13,8 @@
 ***
 
 ## 1. Resumen
+Pokemon es un anime basado en su mayoria en los videojuegos de la franquicia Pokemon.Fue creado
 
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
 
 ## 2. Investigando al usuario
 Comenzamos realizando una encuesta para conocer a los usuarios sobre el mundo pokemon. Obtuvimos que el 94.6% habia visto el anime de pokemon, ademas a la mayoria le interesaba saber el tipo de cada pokemon principalmente. Como sugerencia la mayoria indico que le gustaria una interfaz bonita asi como datos curiosos sobre los pokemones.
@@ -24,7 +24,7 @@ Realizamos el prototipado de baja fidelidad en papel
 ![alt text](src/data/imagen/prototipoPapel.jpg)
 
 ## 4. Historias de usuario
-Creamos las historias de usuario basandonos en la cuesta realizada y las opciones que habian tenido mayor aceptación por parte de los encuestados.
+Creamos las historias de usuario basandonos en la encuesta realizada y las opciones que habian tenido mayor aceptación por parte de los encuestados.
 
 Historia de usuario 1:
 Yo como usuario que conoce el anime pokemon quiero una página que me permita ver todos los pokemones para poder conocerlos mejor.
