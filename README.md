@@ -15,6 +15,14 @@
 ## 1. Resumen
 Pokemon es un anime basado en su mayoria en los videojuegos de la franquicia Pokemon.Fue creado
 
+<<<<<<< HEAD
+=======
+Pokémon GO es una experiencia de juego internacional que cuenta con más de mil millones de descargas y ha sido nombrada "el mejor juego para móviles" por Game Developers Choice Awards y "la mejor aplicación del año" por TechCrunch (tomado de Google Play). Los usuarios del juego se convierten en "Maestros/ entrenadores de Pokémon" y pueden:
+
+Descubrir el mundo Pokémon: explorar y descubrir nuevos Pokémon allá donde vayan.
+Atrapar distintos Pokémon para completar su Pokédex.
+Pelear contra Pokémon de otros entrenadores y conquistar un gimnasio.
+>>>>>>> 883769664cf389cbc05c977f9a7202e009956a4e
 
 ## 2. Investigando al usuario
 Comenzamos realizando una encuesta para conocer a los usuarios sobre el mundo pokemon. Obtuvimos que el 94.6% habia visto el anime de pokemon, ademas a la mayoria le interesaba saber el tipo de cada pokemon principalmente. Como sugerencia la mayoria indico que le gustaria una interfaz bonita asi como datos curiosos sobre los pokemones.
