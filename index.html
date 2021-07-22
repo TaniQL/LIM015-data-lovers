@@ -2,43 +2,55 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>.:Pokemon:.</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/ad40416f54.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <!------------------------------------Diseño del header---------------------------------->
     <header class="container-header">
-        <img src="./data/imagen/logo.png" alt="logo de pokemon" width="180" class="header-img">
-      <div class="nav-bar">
-        <input type="button" id="btnHome" value="HOME" class="btnHeader">
-        <label for="btnHome"></label>
-        <input type="button" id="btnPokedex" value="POKEDEX" class="btnHeader">
-        <label for="btnPokedex"></label>
-        <input type="button" id="btnTop10" value="TOP10" class="btnHeader">
-        <label for="btnTop10"></label>
-        </div>
+       <!----------------------Barra de Navegación ---------------------->
+      <nav class="nav-bar">
+        <img src="./data/imagen/logo.png" alt="logo de pokemon" width="180" class="logo-img">
+        <!--------------Modelo en responsive --------------->
+       <button class="nav-toggle">
+        <i class="fas fa-bars"></i>
+       </button>
+        <ul class="nav-menu">
+          <il class="nav-menu-item" >
+            <a id="btnHome" class="nav-menu-content">home</a>
+          </il>
+          <il class="nav-menu-item">
+            <a id="btnPokedex" class="nav-menu-content" >pokedex</a>
+          </il>
+          <il class="nav-menu-item" >
+            <a id="btnInfo" class="nav-menu-content" >+info</a>
+          </il>
+          </ul>
+      </nav>
     </header>
-
+  <!---------------------------------Diseño del Main--------------------------------->
     <main class ="container-main" id="container-main">
-      <section class="container-home" id="home">
-          <img src="./data/imagen/pikachu.png" alt="pikachu img" width="520" height="560" id="imgPikachu" class="imgPikachu" >
+      <section class="container-home" id="containerHome">
+          <img src="./data/imagen/pikachu.png" alt="pikachu img"  id="imgPikachu" class="imgPikachu" >
           <div class="container-welcome">
-            <div class="welcome">
-              <p>Welcome to the community!</p>
-            </div>
+              <p class="textWelcome">Welcome to the community!</p>
           </div>
       </section>
     </main>
-
+<!--------------------------------Diseño del container pokedex con filtros--------------------------------->
     <main class="container-mainPokedex" id="containerMainPokedex" style="display:none">
-      <section class="filterPokemon">
-        <select id="seleccionarRegion">
-          <option disabled selected>Seleccionar Región</option>
+      <section class="filterPokemon" id="filterOptions" >
+        <select class="filterPokedex" id="seleccionarRegion">
+          <option disabled selected>Region</option>
           <option value="johto">Johto</option>
           <option value="kanto">Kanto</option>
         </select>
-        <select id="seleccionarTipo" name="Tipo">
-          <option disabled selected>Seleccionar Tipo</option>
+        <select class="filterPokedex" id="seleccionarTipo" name="Tipo">
+          <option disabled selected>Type</option>
           <option value="grass">Grass</option>
+          <option value="fire">Fire</option>
           <option value="poison">Poison</option>
           <option value="water">Water</option>
           <option value="flying">Flying</option>
@@ -54,34 +66,40 @@
           <option value="dragon">Dragon</option>
         </select>
 
-        <select id="seleccionarOrden">
-        <option disabled selected>Ordenar por</option>
-        <option value="a-z">ordenar a-z</option>
-        <option value="z-a">ordenar z-a</option>
+        <select class="filterPokedex" id="seleccionarOrden">
+        <option disabled selected>Sort</option>
+        <option value="a-z">Sort A-Z</option>
+        <option value="z-a">Sort Z-A</option>
         </select>
 
-        <input type="button" id="cleanFilter" value="Limpiar Filtros">
-
+        <i class="far fa-trash-alt fa-2x" input type="button" id="cleanFilter"></i>
         <br>
 
       </section>
+<!---------------------------------Diseño del Modal--------------------------------->
+      <section class="modal-container" id="modal-container">
+        <button class="close-modal" id="close-modal">X</button>
+        <div class="modal-pokemon" id="modal-pokemon">
+        </div>
 
+        
+      </section>
+<!---------------------------------Diseño del Card Pokemon-------------------------------->
       <section class="cardsPokemon" id="cardsPokemon">
         <div class="cardFrontPokemon" id="cardFrontPokemon" >
         </div>
-
-        <div class="cardBackPokemon" id="cardBackPokemon">
-        </div>
       </section>
-
+     
     </main>
-
-
-    <footer class="container-footer" id="container-footer" style="display:none">
-      <p>Creado por Tania y Mafer. LIM015</p>
+<!---------------------------------Diseño del container Info Extra--------------------------------->
+    <main id= "containerMoreInfo" style="display:none">
+      <section class="messageCalcular" id="infoExtra" >
+      </section>
+    </main>
+<!---------------------------------Diseño del Footer--------------------------------->
+    <footer class="container-footer" id="container-footer">
+      <p class="textFooter"> ©Created by Tania and Mafer - LIM015</p>
     </footer>
-
-    <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
 </html>

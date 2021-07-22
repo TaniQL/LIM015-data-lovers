@@ -1,21 +1,16 @@
-/* eslint-disable no-prototype-builtins */
-// estas funciones son de ejemplo
 
-/*Cara Delantera de la tarjeta*/
+/*----------Colores del fondo de tarjeta según el tipo--------- */
 
-export const dataPokemon = (elemento) => {
-
-  return `<div class="cardPokemon-front" id="cardPokemonFront">
-  <h1 class="namePokemon">${elemento.name}</h1>
-  <h1 class="numPokemon">N°${elemento.num}</h1><br></br>
-  <img src="${elemento.img}" alt="" class="imgPokemon">
-  <h1 class="typePokemon">${elemento.type}</h1>
-  </div>`
-};
+// export const colorCard = (main_types, allData) => {
+//   //let dataColorType = allData.filter(tipo=> tipo.type[0]== main_types[0]);
+// const poke_types = allData.map(type => type.type[0]);
+// const type = main_types.find(type => poke_types.indexOf(type) > -1);
+// return type;
+// };
 
 /* ---------------Function Filter Region --------------------*/
 
-export const filterPokemon = (regionSeleccionada, allData) => {
+export const filterRegion = (regionSeleccionada, allData) => {
 let dataFilterRegion = allData.filter(reg=>reg.generation.name == regionSeleccionada)
 return dataFilterRegion;
 };
@@ -23,20 +18,28 @@ return dataFilterRegion;
 /* ---------------Function Filter Type --------------------*/
 
 export const filterType = (tipoSeleccionado, allData) => {
-
-  let dataFilterType = allData.filter(tipo=> tipo.type.includes(tipoSeleccionado));
-  return dataFilterType;
-  };
+let dataFilterType = allData.filter(tipo=> tipo.type.includes(tipoSeleccionado));
+return dataFilterType;
+};
 
   /* ---------------Function Sort--------------------*/
 export const filterBySort = (ordenSeleccionado, allData) => {
+  let orderAZ = Array.from(allData);
+  let orderZA = Array.from(allData);
+  orderAZ =orderAZ.sort((a, b) => (a.name > b.name) ? 1 : -1);
+  orderZA =orderZA.sort((a, b) => (b.name > a.name) ? 1 : -1);
   if(ordenSeleccionado === "a-z"){
-    return allData.sort((a, b) => (a.name > b.name) ? 1 : -1)
+    return orderAZ;
   } else{
-    return allData.sort((a, b) => (b.name > a.name) ? 1 : -1)
+    return orderZA;
   }
 };
 
+ export const computeStats = (rarity,allData) => {
+ let filterLegendarios = Array.from(allData);
+  filterLegendarios = filterLegendarios.filter( leg => leg['pokemon-rarity'].includes(rarity));
+  return filterLegendarios;
+ }
 
 /* -------------- Cara trasera de la tarjeta--------------------*/
 
