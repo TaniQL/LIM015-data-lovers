@@ -17,26 +17,9 @@ Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-dat
 
 ## 2. Prototipado en papelq
 
-<<<<<<< HEAD
 ![alt text](src/data/imagen/1.jpeg)
 
 ![alt text](src/data/imagen/2.jpeg)
 
-
 ![alt text](src/data/imagen/3.jpeg)
-=======
-![alt text](src/data/imagen/1.png)
 
-![alt text](src/data/imagen/2.png)
-
-
-![alt text](src/data/imagen/3.png)
->>>>>>> 3b4c62d53fb3ad38b33832703fbc465e8dc6c329
-
-
-
-## 3. Historias de usuario
-
-## 4. Prototipado en alta fidelidad
-
-## 5. Página web
